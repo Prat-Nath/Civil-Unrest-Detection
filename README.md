@@ -123,3 +123,16 @@ python scripts/social_train_sequence.py --arch gru --seed 42
 python scripts/social_train_sequence.py --arch transformer --seed 42
 python scripts/social_summary.py
 ```
+
+##Run these commands after setup this Project:
+
+```
+cd E:\ai\NLP
+python -m pip install fastapi uvicorn
+python app/backend/server.py
+
+```
+
+## This project is running on:
+
+http://127.0.0.1:8001
