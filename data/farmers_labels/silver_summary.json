@@ -1,0 +1,51 @@
+{
+  "run_id": "20261118_130052",
+  "rule": "label 1 = STRONG violence term; 0 = no STRONG and no WEAK term; ambiguous removed",
+  "splits": {
+    "train": {
+      "rows": 49946,
+      "positives": 16860,
+      "positive_rate": 0.3376,
+      "day_min": "2020-11-01",
+      "day_max": "2021-06-30"
+    },
+    "val": {
+      "rows": 17888,
+      "positives": 4472,
+      "positive_rate": 0.25,
+      "day_min": "2021-07-01",
+      "day_max": "2021-09-30"
+    },
+    "test": {
+      "rows": 12287,
+      "positives": 4487,
+      "positive_rate": 0.3652,
+      "day_min": "2021-10-01",
+      "day_max": "2021-11-21"
+    }
+  },
+  "rule_on_gold": {
+    "precision": 0.9384,
+    "recall": 0.8379,
+    "f1": 0.8853,
+    "pr_auc": 0.797,
+    "roc_auc": 0.917,
+    "prevalence_est": 0.0661,
+    "threshold": 0.5,
+    "n_gold": 293
+  },
+  "rule_on_gold_ci95": {
+    "precision": [
+      0.848,
+      0.97
+    ],
+    "recall": [
+      0.544,
+      0.993
+    ],
+    "f1": [
+      0.673,
+      0.977
+    ]
+  }
+}

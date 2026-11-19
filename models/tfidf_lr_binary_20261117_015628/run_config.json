@@ -1,0 +1,25 @@
+{
+  "model_type": "baseline",
+  "run_name": "tfidf_lr_binary_20261117_015628",
+  "task": "binary",
+  "mask_cues": false,
+  "label_names": [
+    "non_violent",
+    "violent"
+  ],
+  "threshold": 0.5731132334468231,
+  "args": {
+    "task": "binary",
+    "data_dir": "E:\\ai\\NLP\\data\\processed",
+    "models_dir": "E:\\ai\\NLP\\models",
+    "results_dir": "E:\\ai\\NLP\\results",
+    "log_dir": "None",
+    "mask_cues": "False",
+    "max_features": "200000",
+    "ngram_max": "2",
+    "C": "4.0",
+    "max_train_samples": "None",
+    "max_eval_samples": "None",
+    "seed": "42"
+  }
+}

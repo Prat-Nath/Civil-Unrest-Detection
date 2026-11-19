@@ -1,0 +1,21 @@
+{
+  "label_names": {
+    "0": "peaceful",
+    "1": "tension",
+    "2": "violent"
+  },
+  "class_weights_3class": {
+    "peaceful": 0.4139,
+    "tension": 6.833,
+    "violent": 2.2838
+  },
+  "class_weights_binary": {
+    "non_violent": 0.5854,
+    "violent": 3.4257
+  },
+  "train_label_counts": {
+    "peaceful": 84021,
+    "tension": 5090,
+    "violent": 15229
+  }
+}

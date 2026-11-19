@@ -1,0 +1,70 @@
+{
+  "run_id": "20261117_185839",
+  "args": {
+    "input": "/home/claude/NLP/data/social_processed/country_day.csv",
+    "output_dir": "/home/claude/NLP/data/social_processed",
+    "log_dir": "None",
+    "baseline_days": "28",
+    "z_threshold": "2.0",
+    "min_related": "20",
+    "horizons": "[1, 3, 7]",
+    "gap_days": "30",
+    "val_frac": "0.15",
+    "test_frac": "0.15"
+  },
+  "definition": "surge = z_today >= z_threshold and related tweets >= min_related; label is classifier-derived, not ground truth",
+  "val_start": "2017-02-23",
+  "test_start": "2017-07-29",
+  "rows_total": 43028,
+  "rows_eligible": 39342,
+  "surge_days_total": 1334,
+  "surge_rate_among_history_ok": 0.03279575179467008,
+  "countries": 42,
+  "splits": {
+    "train": {
+      "rows": 26626,
+      "date_min": "2014-01-29",
+      "date_max": "2017-02-22",
+      "positive_rate": {
+        "h1": 0.02922810713210954,
+        "h3": 0.08135542055016792,
+        "h7": 0.1703371810449575
+      },
+      "labelled_rows": {
+        "h1": 26584,
+        "h3": 26501,
+        "h7": 26336
+      }
+    },
+    "val": {
+      "rows": 6378,
+      "date_min": "2017-02-23",
+      "date_max": "2017-07-28",
+      "positive_rate": {
+        "h1": 0.023518344308560677,
+        "h3": 0.06632173095014111,
+        "h7": 0.14455942301661964
+      },
+      "labelled_rows": {
+        "h1": 6378,
+        "h3": 6378,
+        "h7": 6378
+      }
+    },
+    "test": {
+      "rows": 6338,
+      "date_min": "2017-07-29",
+      "date_max": "2017-12-31",
+      "positive_rate": {
+        "h1": 0.02445997458703939,
+        "h3": 0.06841596909207985,
+        "h7": 0.14571617598412173
+      },
+      "labelled_rows": {
+        "h1": 6296,
+        "h3": 6212,
+        "h7": 6046
+      }
+    }
+  }
+}

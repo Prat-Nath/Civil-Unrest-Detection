@@ -1,0 +1,59 @@
+{
+  "run_id": "20261117_012956",
+  "args": {
+    "input_dir": "E:\\ai\\NLP\\data",
+    "output_dir": "E:\\ai\\NLP\\data\\processed",
+    "log_dir": "None",
+    "val_frac": "0.15",
+    "test_frac": "0.15",
+    "min_chars": "20",
+    "seed": "42"
+  },
+  "steps": {
+    "raw_rows": 168500,
+    "crowd_rows": 149014,
+    "after_dedup_rows": 149010
+  },
+  "splits": {
+    "train": {
+      "rows": 104340,
+      "date_min": "2018-01-01",
+      "date_max": "2023-11-25",
+      "label_counts": {
+        "peaceful": 84021,
+        "tension": 5090,
+        "violent": 15229
+      },
+      "violent_rate": 0.146,
+      "fatality_rate": 0.0118,
+      "median_words": 36.0
+    },
+    "val": {
+      "rows": 22383,
+      "date_min": "2023-11-26",
+      "date_max": "2024-10-25",
+      "label_counts": {
+        "peaceful": 18868,
+        "tension": 1023,
+        "violent": 2492
+      },
+      "violent_rate": 0.1113,
+      "fatality_rate": 0.0078,
+      "median_words": 50.0
+    },
+    "test": {
+      "rows": 22287,
+      "date_min": "2024-10-26",
+      "date_max": "2025-11-01",
+      "label_counts": {
+        "peaceful": 18925,
+        "tension": 992,
+        "violent": 2370
+      },
+      "violent_rate": 0.1063,
+      "fatality_rate": 0.0101,
+      "median_words": 47.0
+    }
+  },
+  "status": "success"
+}

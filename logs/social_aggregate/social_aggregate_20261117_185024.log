@@ -1,0 +1,33 @@
+2026-11-17 18:50:24 | INFO     | social_aggregate | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-17 18:50:24 | INFO     | social_aggregate | log_environment:67 | Platform      : Linux-6.8.0-138-generic-x86_64-with-glibc2.35
+2026-11-17 18:50:24 | INFO     | social_aggregate | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-17 18:50:24 | INFO     | social_aggregate | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-17 18:50:24 | INFO     | social_aggregate | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-17 18:50:25 | INFO     | social_aggregate | log_environment:74 | Package       : numpy 2.2.6
+2026-11-17 18:50:25 | INFO     | social_aggregate | log_environment:74 | Package       : pandas 2.3.3
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:76 | Package       : torch not installed
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:74 | Package       : transformers 5.20.2
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : files = ['tweets_2014.json.gz']
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : input_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/social
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : log_dir = None
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : max_lines = None
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : merge_parts = None
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : output_dir = data/social_processed/parts/2014
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : progress_every = 10000000
+2026-11-17 18:50:26 | INFO     | social_aggregate | log_environment:79 | Arg           : workers = 1
+2026-11-17 18:50:26 | INFO     | social_aggregate | main:215 | === SOCIAL AGGREGATE started (run 20261117_185024) | log file: /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/logs/social_aggregate/social_aggregate_20261117_185024.log ===
+2026-11-17 18:50:26 | INFO     | social_aggregate | main:228 | Input files: ['tweets_2014.json.gz']
+2026-11-17 18:50:26 | INFO     | social_aggregate | main:229 | Fast parser agrees with json on the first lines of every file: True
+2026-11-17 18:50:26 | INFO     | social_aggregate | timed_step:85 | START  read tweets_2014.json.gz
+2026-11-17 18:50:59 | INFO     | social_aggregate | process_file:124 | tweets_2014.json.gz: 10,000,000 lines | 4,414 cells | 302582 lines/s
+2026-11-17 18:51:33 | INFO     | social_aggregate | process_file:124 | tweets_2014.json.gz: 20,000,000 lines | 8,733 cells | 300010 lines/s
+2026-11-17 18:51:58 | INFO     | social_aggregate | timed_step:92 | DONE   read tweets_2014.json.gz (91.8s)
+2026-11-17 18:51:58 | INFO     | social_aggregate | main:250 | tweets_2014.json.gz: 27,492,265 valid lines, 0 malformed, 92s
+2026-11-17 18:51:58 | INFO     | social_aggregate | timed_step:85 | START  write country_day.csv
+2026-11-17 18:51:58 | INFO     | social_aggregate | timed_step:92 | DONE   write country_day.csv (0.2s)
+2026-11-17 18:51:59 | INFO     | social_aggregate | write_outputs:204 | Total valid lines: 27,492,265 | malformed: 0 | country-day cells: 12,088
+2026-11-17 18:51:59 | INFO     | social_aggregate | write_outputs:206 | Related share overall: 0.0678
+2026-11-17 18:51:59 | INFO     | social_aggregate | write_outputs:207 | Score threshold check: min score among related=0.5000, max among unrelated=0.5000
+2026-11-17 18:51:59 | INFO     | social_aggregate | write_outputs:208 | Wrote data/social_processed/parts/2014/country_day.csv
+2026-11-17 18:51:59 | INFO     | social_aggregate | main:269 | === SOCIAL AGGREGATE finished successfully in 92.1s ===

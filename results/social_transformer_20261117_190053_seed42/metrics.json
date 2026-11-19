@@ -1,0 +1,182 @@
+{
+  "run_name": "social_transformer_20261117_190053_seed42",
+  "args": {
+    "panel": "/home/claude/NLP/data/social_processed/panel.csv.gz",
+    "models_dir": "/home/claude/NLP/models",
+    "results_dir": "/home/claude/NLP/results",
+    "log_dir": "None",
+    "arch": "transformer",
+    "window": "28",
+    "d_model": "64",
+    "layers": "2",
+    "heads": "4",
+    "dropout": "0.2",
+    "epochs": "40",
+    "batch_size": "256",
+    "lr": "0.001",
+    "weight_decay": "0.01",
+    "patience": "6",
+    "horizons": "[1, 3, 7]",
+    "seed": "42",
+    "max_train_samples": "None"
+  },
+  "features": [
+    "log_tweets",
+    "log_related",
+    "share",
+    "high_share",
+    "mean_score",
+    "max_score",
+    "z_today",
+    "missing",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "best_val_mean_pr_auc": 0.18181880061370456,
+  "metrics": {
+    "seq_transformer_h1": {
+      "val": {
+        "n": 6378,
+        "positives": 150,
+        "prevalence": 0.023518344308560677,
+        "threshold": 0.8014024496078491,
+        "accuracy": 0.942772028849169,
+        "precision": 0.11469534050179211,
+        "recall": 0.21333333333333335,
+        "f1": 0.14918414918414918,
+        "pr_auc": 0.09045382747476709,
+        "pr_auc_lift_over_prevalence": 3.8460967442270966,
+        "roc_auc": 0.7914579319203597,
+        "confusion_matrix": [
+          [
+            5981,
+            247
+          ],
+          [
+            118,
+            32
+          ]
+        ]
+      },
+      "test": {
+        "n": 6296,
+        "positives": 154,
+        "prevalence": 0.02445997458703939,
+        "threshold": 0.8014024496078491,
+        "accuracy": 0.9394853875476493,
+        "precision": 0.12040133779264214,
+        "recall": 0.23376623376623376,
+        "f1": 0.15894039735099338,
+        "pr_auc": 0.08621429589765324,
+        "pr_auc_lift_over_prevalence": 3.5247091361793816,
+        "roc_auc": 0.7581290412615713,
+        "confusion_matrix": [
+          [
+            5879,
+            263
+          ],
+          [
+            118,
+            36
+          ]
+        ]
+      }
+    },
+    "seq_transformer_h3": {
+      "val": {
+        "n": 6378,
+        "positives": 423,
+        "prevalence": 0.06632173095014111,
+        "threshold": 0.6696208119392395,
+        "accuracy": 0.8038570084666039,
+        "precision": 0.16826923076923078,
+        "recall": 0.49645390070921985,
+        "f1": 0.2513464991023339,
+        "pr_auc": 0.17151566463800905,
+        "pr_auc_lift_over_prevalence": 2.5861156242582073,
+        "roc_auc": 0.7605734895085878,
+        "confusion_matrix": [
+          [
+            4917,
+            1038
+          ],
+          [
+            213,
+            210
+          ]
+        ]
+      },
+      "test": {
+        "n": 6212,
+        "positives": 425,
+        "prevalence": 0.06841596909207985,
+        "threshold": 0.6696208119392395,
+        "accuracy": 0.8032839665164199,
+        "precision": 0.14577777777777778,
+        "recall": 0.38588235294117645,
+        "f1": 0.21161290322580645,
+        "pr_auc": 0.1389704131409664,
+        "pr_auc_lift_over_prevalence": 2.031256956309843,
+        "roc_auc": 0.7117238435031866,
+        "confusion_matrix": [
+          [
+            4826,
+            961
+          ],
+          [
+            261,
+            164
+          ]
+        ]
+      }
+    },
+    "seq_transformer_h7": {
+      "val": {
+        "n": 6378,
+        "positives": 922,
+        "prevalence": 0.14455942301661964,
+        "threshold": 0.5828273892402649,
+        "accuracy": 0.6251175917215428,
+        "precision": 0.24309199020636585,
+        "recall": 0.7537960954446855,
+        "f1": 0.36762761174292513,
+        "pr_auc": 0.28348690972833757,
+        "pr_auc_lift_over_prevalence": 1.9610406835654413,
+        "roc_auc": 0.7408142084019822,
+        "confusion_matrix": [
+          [
+            3292,
+            2164
+          ],
+          [
+            227,
+            695
+          ]
+        ]
+      },
+      "test": {
+        "n": 6046,
+        "positives": 881,
+        "prevalence": 0.14571617598412173,
+        "threshold": 0.5828273892402649,
+        "accuracy": 0.6266953357591796,
+        "precision": 0.22501998401278978,
+        "recall": 0.6390465380249716,
+        "f1": 0.3328406739580254,
+        "pr_auc": 0.23046728595032429,
+        "pr_auc_lift_over_prevalence": 1.5816177194729406,
+        "roc_auc": 0.6883689550178942,
+        "confusion_matrix": [
+          [
+            3226,
+            1939
+          ],
+          [
+            318,
+            563
+          ]
+        ]
+      }
+    }
+  }
+}

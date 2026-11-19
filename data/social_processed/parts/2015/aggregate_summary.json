@@ -1,0 +1,217 @@
+{
+  "run_id": "20261117_185203",
+  "args": {
+    "input_dir": "/sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/social",
+    "output_dir": "data/social_processed/parts/2015",
+    "log_dir": "None",
+    "files": "['tweets_2015.json.gz']",
+    "workers": "1",
+    "max_lines": "None",
+    "progress_every": "10000000",
+    "merge_parts": "None"
+  },
+  "total_valid_lines": 35179968,
+  "malformed_lines": 0,
+  "country_day_cells": 14825,
+  "per_year": {
+    "2015": {
+      "tweets": 35179968,
+      "related": 3009812
+    }
+  },
+  "per_country": {
+    "ZA": {
+      "tweets": 10944287,
+      "related": 767597
+    },
+    "NG": {
+      "tweets": 5627721,
+      "related": 665742
+    },
+    "PK": {
+      "tweets": 3786589,
+      "related": 646226
+    },
+    "TH": {
+      "tweets": 2944094,
+      "related": 92161
+    },
+    "KE": {
+      "tweets": 2302568,
+      "related": 337270
+    },
+    "EG": {
+      "tweets": 2267307,
+      "related": 61647
+    },
+    "GH": {
+      "tweets": 1533048,
+      "related": 88580
+    },
+    "DZ": {
+      "tweets": 566484,
+      "related": 10580
+    },
+    "LK": {
+      "tweets": 561977,
+      "related": 27232
+    },
+    "UG": {
+      "tweets": 510268,
+      "related": 61319
+    },
+    "BD": {
+      "tweets": 490314,
+      "related": 41542
+    },
+    "MA": {
+      "tweets": 487635,
+      "related": 20732
+    },
+    "NP": {
+      "tweets": 485825,
+      "related": 57199
+    },
+    "NA": {
+      "tweets": 410832,
+      "related": 22936
+    },
+    "TZ": {
+      "tweets": 320535,
+      "related": 17185
+    },
+    "TN": {
+      "tweets": 319038,
+      "related": 9436
+    },
+    "ZM": {
+      "tweets": 236900,
+      "related": 17075
+    },
+    "CM": {
+      "tweets": 177278,
+      "related": 5069
+    },
+    "SD": {
+      "tweets": 172929,
+      "related": 5128
+    },
+    "KH": {
+      "tweets": 135846,
+      "related": 5442
+    },
+    "LY": {
+      "tweets": 125712,
+      "related": 5508
+    },
+    "CI": {
+      "tweets": 122276,
+      "related": 3690
+    },
+    "MW": {
+      "tweets": 121004,
+      "related": 5979
+    },
+    "SN": {
+      "tweets": 99566,
+      "related": 4041
+    },
+    "MM": {
+      "tweets": 76627,
+      "related": 3632
+    },
+    "AO": {
+      "tweets": 57187,
+      "related": 1440
+    },
+    "MZ": {
+      "tweets": 52146,
+      "related": 1647
+    },
+    "ET": {
+      "tweets": 48653,
+      "related": 6812
+    },
+    "CD": {
+      "tweets": 34243,
+      "related": 2032
+    },
+    "BJ": {
+      "tweets": 23590,
+      "related": 1065
+    },
+    "SO": {
+      "tweets": 23513,
+      "related": 5543
+    },
+    "MG": {
+      "tweets": 20081,
+      "related": 657
+    },
+    "SL": {
+      "tweets": 19459,
+      "related": 1561
+    },
+    "LR": {
+      "tweets": 13977,
+      "related": 1494
+    },
+    "ML": {
+      "tweets": 11754,
+      "related": 727
+    },
+    "BF": {
+      "tweets": 9631,
+      "related": 494
+    },
+    "NE": {
+      "tweets": 8690,
+      "related": 346
+    },
+    "TG": {
+      "tweets": 7598,
+      "related": 440
+    },
+    "GN": {
+      "tweets": 7242,
+      "related": 401
+    },
+    "BI": {
+      "tweets": 5337,
+      "related": 1518
+    },
+    "CF": {
+      "tweets": 5218,
+      "related": 315
+    },
+    "TD": {
+      "tweets": 4989,
+      "related": 372
+    }
+  },
+  "score_histogram_bin_width_0.05": [
+    5162464,
+    5923582,
+    4939924,
+    4023200,
+    3230901,
+    2706135,
+    3393618,
+    1342963,
+    848729,
+    598640,
+    461375,
+    380437,
+    331888,
+    294293,
+    269984,
+    260399,
+    259076,
+    264308,
+    268558,
+    219494
+  ],
+  "min_score_among_related": 0.5000001788139343,
+  "max_score_among_unrelated": 0.4999999403953552,
+  "elapsed_seconds": 117.5
+}

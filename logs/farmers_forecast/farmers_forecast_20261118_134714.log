@@ -1,0 +1,77 @@
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:47:14 | INFO     | farmers_forecast | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:47:17 | INFO     | farmers_forecast | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : C = 0.1
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : alert_share = 0.2
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : baseline_days = 28
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : bootstrap = 500
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : data_dir = E:\ai\NLP\data\farmers_processed
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : log_dir = None
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : min_events = 15
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : min_train_days = 90
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : refit_every = 7
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : seed = 42
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : signals = E:\ai\NLP\results\farmers_tweets_20261118_132735\daily_signals_transformer.csv
+2026-11-18 13:47:18 | INFO     | farmers_forecast | log_environment:79 | Arg           : z_threshold = 2.0
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:150 | === FARMERS FORECAST started (run 20261118_134714) ===
+2026-11-18 13:47:18 | INFO     | farmers_forecast | timed_step:85 | START  build features
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:158 | days=386 | surge days=15: ['2020-12-08', '2020-12-14', '2021-01-13', '2021-01-26', '2021-02-06', '2021-02-18', '2021-03-23', '2021-03-26', '2021-05-08', '2021-05-26', '2021-08-09', '2021-08-28', '2021-08-29', '2021-09-27', '2021-10-04']
+2026-11-18 13:47:18 | INFO     | farmers_forecast | timed_step:92 | DONE   build features (0.1s)
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:170 | feature set acled        : 12 features
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:170 | feature set tweets       : 25 features
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:170 | feature set acled_tweets : 35 features
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:170 | feature set model_signals: 8 features
+2026-11-18 13:47:18 | INFO     | farmers_forecast | main:170 | feature set acled_tweets_model: 41 features
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:207 | h=0: eligible rows=358, scored=268, positives=9 (3.4%)
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   prevalence    ROC-AUC=0.500 PR-AUC=0.034 (x1.00) | alert 0 days: P=0.000 R=0.000 F1=0.000
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   persistence   ROC-AUC=0.546 PR-AUC=0.049 (x1.44) | alert 54 days: P=0.037 R=0.222 F1=0.063
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   acled         ROC-AUC=0.512 PR-AUC=0.041 (x1.21) | alert 87 days: P=0.035 R=0.333 F1=0.062
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   tweets        ROC-AUC=0.632 PR-AUC=0.120 (x3.57) | alert 64 days: P=0.062 R=0.444 F1=0.110
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   acled_tweets  ROC-AUC=0.659 PR-AUC=0.211 (x6.29) | alert 74 days: P=0.068 R=0.556 F1=0.120
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   model_signals ROC-AUC=0.504 PR-AUC=0.044 (x1.32) | alert 50 days: P=0.080 R=0.444 F1=0.136
+2026-11-18 13:47:19 | INFO     | farmers_forecast | main:226 |   acled_tweets_model ROC-AUC=0.627 PR-AUC=0.210 (x6.25) | alert 82 days: P=0.049 R=0.444 F1=0.088
+2026-11-18 13:47:21 | INFO     | farmers_forecast | main:229 |   95% CI (7-day block bootstrap): {'persistence': [0.345, 0.743], 'acled': [0.245, 0.764], 'tweets': [0.434, 0.913], 'acled_tweets': [0.442, 0.941], 'model_signals': [0.222, 0.794], 'acled_tweets_model': [0.337, 0.895], 'diff_acled_tweets_minus_acled': [0.006, 0.284], 'diff_acled_tweets_model_minus_acled_tweets': [-0.127, 0.055]}
+2026-11-18 13:47:21 | INFO     | farmers_forecast | main:239 |   top coefficients (acled_tweets_model): [('tw_quote_share', -0.55), ('sg_p90', -0.52), ('ac_states', -0.45), ('tw_event_words_share', 0.43), ('ac_farmer_28d', -0.41), ('tw_log_users', 0.36)]
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:207 | h=1: eligible rows=342, scored=252, positives=8 (3.2%)
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   prevalence    ROC-AUC=0.500 PR-AUC=0.032 (x1.00) | alert 0 days: P=0.000 R=0.000 F1=0.000
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   persistence   ROC-AUC=0.515 PR-AUC=0.047 (x1.49) | alert 51 days: P=0.039 R=0.250 F1=0.068
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   acled         ROC-AUC=0.591 PR-AUC=0.047 (x1.49) | alert 81 days: P=0.049 R=0.500 F1=0.090
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   tweets        ROC-AUC=0.511 PR-AUC=0.040 (x1.26) | alert 57 days: P=0.035 R=0.250 F1=0.062
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   acled_tweets  ROC-AUC=0.554 PR-AUC=0.057 (x1.78) | alert 57 days: P=0.053 R=0.375 F1=0.092
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   model_signals ROC-AUC=0.564 PR-AUC=0.057 (x1.80) | alert 50 days: P=0.080 R=0.500 F1=0.138
+2026-11-18 13:47:22 | INFO     | farmers_forecast | main:226 |   acled_tweets_model ROC-AUC=0.519 PR-AUC=0.047 (x1.48) | alert 59 days: P=0.034 R=0.250 F1=0.060
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:229 |   95% CI (7-day block bootstrap): {'persistence': [0.293, 0.724], 'acled': [0.363, 0.766], 'tweets': [0.251, 0.807], 'acled_tweets': [0.33, 0.818], 'model_signals': [0.373, 0.78], 'acled_tweets_model': [0.313, 0.769], 'diff_acled_tweets_minus_acled': [-0.264, 0.259], 'diff_acled_tweets_model_minus_acled_tweets': [-0.171, 0.047]}
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:239 |   top coefficients (acled_tweets_model): [('tw_log_users', 0.5), ('ac_farmer_28d', -0.41), ('ac_log_all', -0.4), ('tw_event_words_log', 0.4), ('tw_anti_share_vs_7d', 0.37), ('tw_log_tweets', 0.35)]
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:207 | h=3: eligible rows=340, scored=250, positives=23 (9.2%)
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   prevalence    ROC-AUC=0.500 PR-AUC=0.092 (x1.00) | alert 0 days: P=0.000 R=0.000 F1=0.000
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   persistence   ROC-AUC=0.505 PR-AUC=0.111 (x1.21) | alert 50 days: P=0.100 R=0.217 F1=0.137
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   acled         ROC-AUC=0.541 PR-AUC=0.108 (x1.17) | alert 81 days: P=0.111 R=0.391 F1=0.173
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   tweets        ROC-AUC=0.425 PR-AUC=0.101 (x1.10) | alert 16 days: P=0.125 R=0.087 F1=0.103
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   acled_tweets  ROC-AUC=0.509 PR-AUC=0.114 (x1.24) | alert 28 days: P=0.107 R=0.130 F1=0.118
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   model_signals ROC-AUC=0.500 PR-AUC=0.121 (x1.32) | alert 36 days: P=0.111 R=0.174 F1=0.136
+2026-11-18 13:47:25 | INFO     | farmers_forecast | main:226 |   acled_tweets_model ROC-AUC=0.506 PR-AUC=0.169 (x1.83) | alert 29 days: P=0.172 R=0.217 F1=0.192
+2026-11-18 13:47:28 | INFO     | farmers_forecast | main:229 |   95% CI (7-day block bootstrap): {'persistence': [0.325, 0.683], 'acled': [0.366, 0.673], 'tweets': [0.19, 0.704], 'acled_tweets': [0.308, 0.717], 'model_signals': [0.334, 0.687], 'acled_tweets_model': [0.277, 0.745], 'diff_acled_tweets_minus_acled': [-0.243, 0.213], 'diff_acled_tweets_model_minus_acled_tweets': [-0.041, 0.046]}
+2026-11-18 13:47:28 | INFO     | farmers_forecast | main:239 |   top coefficients (acled_tweets_model): [('ac_farmer_28d', -0.59), ('tw_log_users', 0.41), ('tw_mean_chars', 0.38), ('ac_z', -0.38), ('tw_event_words_log', 0.36), ('tw_police_share', -0.31)]
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:207 | h=7: eligible rows=336, scored=246, positives=50 (20.3%)
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   prevalence    ROC-AUC=0.500 PR-AUC=0.203 (x1.00) | alert 0 days: P=0.000 R=0.000 F1=0.000
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   persistence   ROC-AUC=0.496 PR-AUC=0.213 (x1.05) | alert 50 days: P=0.160 R=0.160 F1=0.160
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   acled         ROC-AUC=0.506 PR-AUC=0.224 (x1.10) | alert 69 days: P=0.145 R=0.200 F1=0.168
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   tweets        ROC-AUC=0.411 PR-AUC=0.203 (x1.00) | alert 7 days: P=0.429 R=0.060 F1=0.105
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   acled_tweets  ROC-AUC=0.537 PR-AUC=0.253 (x1.24) | alert 16 days: P=0.250 R=0.080 F1=0.121
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   model_signals ROC-AUC=0.483 PR-AUC=0.192 (x0.94) | alert 25 days: P=0.280 R=0.140 F1=0.187
+2026-11-18 13:47:29 | INFO     | farmers_forecast | main:226 |   acled_tweets_model ROC-AUC=0.553 PR-AUC=0.323 (x1.59) | alert 15 days: P=0.467 R=0.140 F1=0.215
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:229 |   95% CI (7-day block bootstrap): {'persistence': [0.337, 0.644], 'acled': [0.365, 0.656], 'tweets': [0.223, 0.606], 'acled_tweets': [0.367, 0.7], 'model_signals': [0.328, 0.631], 'acled_tweets_model': [0.373, 0.718], 'diff_acled_tweets_minus_acled': [-0.21, 0.24], 'diff_acled_tweets_model_minus_acled_tweets': [-0.018, 0.049]}
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:239 |   top coefficients (acled_tweets_model): [('ac_farmer_28d', -0.63), ('tw_users_per_tweet', 0.47), ('ac_days_since_surge', 0.44), ('tw_event_words_log', 0.38), ('tw_police_share', -0.34), ('tw_anti_share_vs_7d', -0.31)]
+2026-11-18 13:47:31 | INFO     | farmers_forecast | timed_step:85 | START  lead-time analysis
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:260 | lead time | {'model': 'acled', 'surges_after_first_prediction': 9, 'surges_with_alert_in_prior_7d': 4, 'share_detected': 0.444, 'mean_earliest_lead_days': 5.5, 'alert_days': 69, 'alert_share_of_scored_days': 0.28}
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:260 | lead time | {'model': 'acled_tweets', 'surges_after_first_prediction': 9, 'surges_with_alert_in_prior_7d': 2, 'share_detected': 0.222, 'mean_earliest_lead_days': 5.5, 'alert_days': 16, 'alert_share_of_scored_days': 0.065}
+2026-11-18 13:47:31 | INFO     | farmers_forecast | timed_step:92 | DONE   lead-time analysis (0.0s)
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:267 | Wrote E:\ai\NLP\results\farmers_forecast_20261118_134714
+2026-11-18 13:47:31 | INFO     | farmers_forecast | main:268 | === FARMERS FORECAST finished successfully ===

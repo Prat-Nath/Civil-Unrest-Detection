@@ -1,0 +1,24 @@
+{
+  "folds": 5,
+  "repeats": 20,
+  "models": {
+    "tfidf": {
+      "precision": 0.8688,
+      "recall": 0.6966,
+      "f1": 0.7692,
+      "mean_threshold": 0.8121,
+      "f1_sd_over_repeats": 0.0344,
+      "run": "farmers_tweets_20261118_130151",
+      "n_gold": 293
+    },
+    "transformer": {
+      "precision": 0.8218,
+      "recall": 0.8093,
+      "f1": 0.815,
+      "mean_threshold": 0.9994,
+      "f1_sd_over_repeats": 0.0258,
+      "run": "farmers_tweets_20261118_132735",
+      "n_gold": 293
+    }
+  }
+}

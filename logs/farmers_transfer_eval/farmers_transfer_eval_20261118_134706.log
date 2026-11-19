@@ -1,0 +1,15 @@
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:47:06 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:47:07 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:47:10 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : labels = E:\ai\NLP\data\farmers_labels\gold_claude.csv
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : log_dir = None
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : run = E:\ai\NLP\results\farmers_transfer_20261118_133829
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : threshold = 0.5
+2026-11-18 13:47:11 | INFO     | farmers_transfer_eval | main:64 | hand-label evaluation: {'labelled': 293, 'positives_labelled': 52, 'threshold': 0.5, 'precision_weighted': 0.398, 'recall_weighted': 0.094, 'f1_weighted': 0.153, 'unweighted_precision': 0.398, 'estimated_violent_share_of_tweets': 0.0665}

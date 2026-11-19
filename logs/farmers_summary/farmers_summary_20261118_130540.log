@@ -1,0 +1,11 @@
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:05:40 | INFO     | farmers_summary | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:05:41 | INFO     | farmers_summary | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:05:44 | INFO     | farmers_summary | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:05:46 | INFO     | farmers_summary | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:05:46 | INFO     | farmers_summary | main:103 | Wrote E:\ai\NLP\results\farmers_summary

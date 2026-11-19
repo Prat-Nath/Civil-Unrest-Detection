@@ -1,0 +1,47 @@
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : batch_size = 64
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : data_dir = E:\ai\NLP\data\farmers_processed
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : label_sheet_size = 300
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : log_dir = None
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : max_length = 96
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : model_dir = E:\ai\NLP\models\distilroberta-base_binary_20261117_015913
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : per_day = 25
+2026-11-18 13:38:29 | INFO     | farmers_transfer | log_environment:79 | Arg           : seed = 42
+2026-11-18 13:38:29 | INFO     | farmers_transfer | main:81 | === FARMERS TRANSFER started (run 20261118_133829) ===
+2026-11-18 13:38:29 | INFO     | farmers_transfer | main:86 | model distilroberta-base_binary_20261117_015913 | mask_cues=False | stored threshold=0.818 | labels=['non_violent', 'violent']
+2026-11-18 13:38:29 | INFO     | farmers_transfer | timed_step:85 | START  sample tweets
+2026-11-18 13:38:35 | WARNING  | farmers_transfer | main:95 | dropping 6 rows with an unreadable date (malformed csv lines)
+2026-11-18 13:38:36 | INFO     | farmers_transfer | main:103 | sampled 9440 tweets over 386 days (<= 25 per day) from 1019102
+2026-11-18 13:38:36 | INFO     | farmers_transfer | timed_step:92 | DONE   sample tweets (7.0s)
+2026-11-18 13:38:36 | INFO     | farmers_transfer | timed_step:85 | START  score
+2026-11-18 13:38:41 | INFO     | farmers_transfer | main:119 | scored 64 / 9440 (2s)
+2026-11-18 13:39:23 | INFO     | farmers_transfer | main:119 | scored 1344 / 9440 (44s)
+2026-11-18 13:40:24 | INFO     | farmers_transfer | main:119 | scored 2624 / 9440 (105s)
+2026-11-18 13:41:33 | INFO     | farmers_transfer | main:119 | scored 3904 / 9440 (174s)
+2026-11-18 13:42:46 | INFO     | farmers_transfer | main:119 | scored 5184 / 9440 (247s)
+2026-11-18 13:44:01 | INFO     | farmers_transfer | main:119 | scored 6464 / 9440 (322s)
+2026-11-18 13:45:19 | INFO     | farmers_transfer | main:119 | scored 7744 / 9440 (400s)
+2026-11-18 13:46:37 | INFO     | farmers_transfer | main:119 | scored 9024 / 9440 (478s)
+2026-11-18 13:47:02 | INFO     | farmers_transfer | timed_step:92 | DONE   score (506.0s)
+2026-11-18 13:47:02 | INFO     | farmers_transfer | timed_step:85 | START  day-level comparison with ACLED
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:142 | model_mean_p               {'acled_farmer_violent': {'spearman': 0.008, 'roc_auc_day_has_event': 0.508}, 'acled_farmer_riot': {'spearman': 0.016, 'roc_auc_day_has_event': 0.515}, 'acled_farmer': {'spearman': -0.036, 'roc_auc_day_has_event': 0.36}, 'surge': {'spearman': -0.009, 'roc_auc_day_has_event': 0.487}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:142 | model_share_p_ge_0.5       {'acled_farmer_violent': {'spearman': 0.034, 'roc_auc_day_has_event': 0.516}, 'acled_farmer_riot': {'spearman': 0.047, 'roc_auc_day_has_event': 0.528}, 'acled_farmer': {'spearman': -0.012, 'roc_auc_day_has_event': 0.42}, 'surge': {'spearman': -0.038, 'roc_auc_day_has_event': 0.453}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:142 | model_p90                  {'acled_farmer_violent': {'spearman': 0.017, 'roc_auc_day_has_event': 0.518}, 'acled_farmer_riot': {'spearman': 0.037, 'roc_auc_day_has_event': 0.529}, 'acled_farmer': {'spearman': -0.021, 'roc_auc_day_has_event': 0.46}, 'surge': {'spearman': 0.027, 'roc_auc_day_has_event': 0.54}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:142 | keyword_violence_share     {'acled_farmer_violent': {'spearman': 0.065, 'roc_auc_day_has_event': 0.538}, 'acled_farmer_riot': {'spearman': 0.077, 'roc_auc_day_has_event': 0.551}, 'acled_farmer': {'spearman': 0.101, 'roc_auc_day_has_event': 0.494}, 'surge': {'spearman': -0.008, 'roc_auc_day_has_event': 0.489}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:142 | tweet_volume               {'acled_farmer_violent': {'spearman': 0.231, 'roc_auc_day_has_event': 0.609}, 'acled_farmer_riot': {'spearman': 0.19, 'roc_auc_day_has_event': 0.623}, 'acled_farmer': {'spearman': 0.289, 'roc_auc_day_has_event': 0.658}, 'surge': {'spearman': 0.161, 'roc_auc_day_has_event': 0.741}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:143 | tweet level: {'mean_p': 0.0203, 'share_ge_0.5': 0.0174, 'share_ge_thr': 0.0133, 'quantiles': {'0.5': 0.0002, '0.9': 0.0035, '0.99': 0.9546}}
+2026-11-18 13:47:02 | INFO     | farmers_transfer | timed_step:92 | DONE   day-level comparison with ACLED (0.1s)
+2026-11-18 13:47:02 | INFO     | farmers_transfer | timed_step:85 | START  label sheet and top tweets
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:158 | label sheet: 300 tweets (stratified by score; scores hidden)
+2026-11-18 13:47:02 | INFO     | farmers_transfer | timed_step:92 | DONE   label sheet and top tweets (0.0s)
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:161 | Wrote E:\ai\NLP\results\farmers_transfer_20261118_133829
+2026-11-18 13:47:02 | INFO     | farmers_transfer | main:162 | === FARMERS TRANSFER finished successfully ===

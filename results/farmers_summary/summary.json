@@ -1,0 +1,596 @@
+{
+  "data": {
+    "tweets": 1084452,
+    "date_min": "2020-11-01",
+    "date_max": "2021-11-21",
+    "days": 386,
+    "acled_events_farmer": 5257,
+    "acled_events_all": 19679
+  },
+  "tweet_classifiers": {
+    "tfidf": {
+      "run": "farmers_tweets_20261118_130151",
+      "gold": {
+        "precision": 0.6735,
+        "recall": 0.8459,
+        "f1": 0.7499,
+        "pr_auc": 0.8859,
+        "roc_auc": 0.9817,
+        "prevalence_est": 0.0661,
+        "threshold": 0.5192,
+        "n_gold": 293,
+        "ci95": {
+          "precision": [
+            0.376,
+            0.908
+          ],
+          "recall": [
+            0.556,
+            0.997
+          ],
+          "f1": [
+            0.46,
+            0.935
+          ]
+        }
+      },
+      "silver_test_f1": 0.7867,
+      "gold_tuned_threshold": {
+        "precision": 0.8688,
+        "recall": 0.6966,
+        "f1": 0.7692,
+        "mean_threshold": 0.8121,
+        "f1_sd_over_repeats": 0.0344,
+        "run": "farmers_tweets_20261118_130151",
+        "n_gold": 293
+      }
+    },
+    "transformer": {
+      "run": "farmers_tweets_20261118_132735",
+      "gold": {
+        "precision": 0.4047,
+        "recall": 0.9893,
+        "f1": 0.5744,
+        "pr_auc": 0.8758,
+        "roc_auc": 0.9802,
+        "prevalence_est": 0.0661,
+        "threshold": 0.1213,
+        "n_gold": 293,
+        "ci95": {
+          "precision": [
+            0.188,
+            0.613
+          ],
+          "recall": [
+            0.969,
+            0.998
+          ],
+          "f1": [
+            0.316,
+            0.757
+          ]
+        }
+      },
+      "silver_test_f1": 0.9482,
+      "gold_tuned_threshold": {
+        "precision": 0.8218,
+        "recall": 0.8093,
+        "f1": 0.815,
+        "mean_threshold": 0.9994,
+        "f1_sd_over_repeats": 0.0258,
+        "run": "farmers_tweets_20261118_132735",
+        "n_gold": 293
+      }
+    },
+    "acled_model_transfer": {
+      "labelled": 293,
+      "positives_labelled": 52,
+      "threshold": 0.5,
+      "precision_weighted": 0.398,
+      "recall_weighted": 0.094,
+      "f1_weighted": 0.153,
+      "unweighted_precision": 0.398,
+      "estimated_violent_share_of_tweets": 0.0665,
+      "labels_file": "gold_claude.csv"
+    }
+  },
+  "extraction": {
+    "run_id": "20261118_130224",
+    "tweets": 1084452,
+    "days": 386,
+    "event_types": {
+      "bharat_bandh": {
+        "tweets_mentioning": 9714,
+        "acled_events_matching": 423,
+        "spearman_daily": 0.225,
+        "precision_at_10_days": 0.5,
+        "share_of_all_days_with_acled_event": 0.021
+      },
+      "chakka_jaam": {
+        "tweets_mentioning": 6500,
+        "acled_events_matching": 230,
+        "spearman_daily": 0.182,
+        "precision_at_10_days": 0.2,
+        "share_of_all_days_with_acled_event": 0.01
+      },
+      "rail_roko": {
+        "tweets_mentioning": 2296,
+        "acled_events_matching": 157,
+        "spearman_daily": 0.212,
+        "precision_at_10_days": 0.4,
+        "share_of_all_days_with_acled_event": 0.171
+      },
+      "tractor_rally": {
+        "tweets_mentioning": 27276,
+        "acled_events_matching": 31,
+        "spearman_daily": 0.173,
+        "precision_at_10_days": 0.4,
+        "share_of_all_days_with_acled_event": 0.054
+      },
+      "mahapanchayat": {
+        "tweets_mentioning": 5534,
+        "acled_events_matching": 37,
+        "spearman_daily": 0.34,
+        "precision_at_10_days": 0.4,
+        "share_of_all_days_with_acled_event": 0.078
+      },
+      "road_blockade": {
+        "tweets_mentioning": 795,
+        "acled_events_matching": 269,
+        "spearman_daily": 0.142,
+        "precision_at_10_days": 0.3,
+        "share_of_all_days_with_acled_event": 0.07
+      },
+      "police_force": {
+        "tweets_mentioning": 7457,
+        "acled_events_matching": 71,
+        "spearman_daily": 0.356,
+        "precision_at_10_days": 0.5,
+        "share_of_all_days_with_acled_event": 0.08
+      },
+      "clash": {
+        "tweets_mentioning": 18384,
+        "acled_events_matching": 358,
+        "spearman_daily": 0.322,
+        "precision_at_10_days": 0.5,
+        "share_of_all_days_with_acled_event": 0.233
+      },
+      "hunger_strike_dharna": {
+        "tweets_mentioning": 5549,
+        "acled_events_matching": 238,
+        "spearman_daily": 0.107,
+        "precision_at_10_days": 0.7,
+        "share_of_all_days_with_acled_event": 0.342
+      }
+    },
+    "places": {
+      "spearman_state_day": 0.343,
+      "spearman_state_month": 0.496,
+      "busy_days_n": 52,
+      "top_state_match": 0.096,
+      "acled_top_state_in_tweets_top3": 0.519,
+      "always_predict_most_mentioned_state_overall": {
+        "state": "Delhi",
+        "accuracy": 0.038
+      }
+    }
+  },
+  "forecast": {
+    "h0": {
+      "n_scored": 268,
+      "positives": 9,
+      "base_rate": 0.0336,
+      "models": {
+        "prevalence": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.0336,
+          "pr_auc_lift": 1.0,
+          "alert_days": 0,
+          "precision_at_alert": 0.0,
+          "recall_at_alert": 0.0,
+          "f1_at_alert": 0.0
+        },
+        "persistence": {
+          "roc_auc": 0.5465,
+          "pr_auc": 0.0485,
+          "pr_auc_lift": 1.44,
+          "alert_days": 54,
+          "precision_at_alert": 0.037,
+          "recall_at_alert": 0.2222,
+          "f1_at_alert": 0.0634
+        },
+        "acled": {
+          "roc_auc": 0.5118,
+          "pr_auc": 0.0408,
+          "pr_auc_lift": 1.21,
+          "alert_days": 87,
+          "precision_at_alert": 0.0345,
+          "recall_at_alert": 0.3333,
+          "f1_at_alert": 0.0625
+        },
+        "tweets": {
+          "roc_auc": 0.6319,
+          "pr_auc": 0.1199,
+          "pr_auc_lift": 3.57,
+          "alert_days": 64,
+          "precision_at_alert": 0.0625,
+          "recall_at_alert": 0.4444,
+          "f1_at_alert": 0.1096
+        },
+        "acled_tweets": {
+          "roc_auc": 0.6589,
+          "pr_auc": 0.2113,
+          "pr_auc_lift": 6.29,
+          "alert_days": 74,
+          "precision_at_alert": 0.0676,
+          "recall_at_alert": 0.5556,
+          "f1_at_alert": 0.1205
+        },
+        "model_signals": {
+          "roc_auc": 0.5036,
+          "pr_auc": 0.0442,
+          "pr_auc_lift": 1.32,
+          "alert_days": 50,
+          "precision_at_alert": 0.08,
+          "recall_at_alert": 0.4444,
+          "f1_at_alert": 0.1356
+        },
+        "acled_tweets_model": {
+          "roc_auc": 0.6272,
+          "pr_auc": 0.21,
+          "pr_auc_lift": 6.25,
+          "alert_days": 82,
+          "precision_at_alert": 0.0488,
+          "recall_at_alert": 0.4444,
+          "f1_at_alert": 0.0879
+        }
+      },
+      "roc_auc_ci95_block_bootstrap": {
+        "persistence": [
+          0.345,
+          0.743
+        ],
+        "acled": [
+          0.245,
+          0.764
+        ],
+        "tweets": [
+          0.434,
+          0.913
+        ],
+        "acled_tweets": [
+          0.442,
+          0.941
+        ],
+        "model_signals": [
+          0.222,
+          0.794
+        ],
+        "acled_tweets_model": [
+          0.337,
+          0.895
+        ],
+        "diff_acled_tweets_minus_acled": [
+          0.006,
+          0.284
+        ],
+        "diff_acled_tweets_model_minus_acled_tweets": [
+          -0.127,
+          0.055
+        ]
+      }
+    },
+    "h1": {
+      "n_scored": 252,
+      "positives": 8,
+      "base_rate": 0.0317,
+      "models": {
+        "prevalence": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.0317,
+          "pr_auc_lift": 1.0,
+          "alert_days": 0,
+          "precision_at_alert": 0.0,
+          "recall_at_alert": 0.0,
+          "f1_at_alert": 0.0
+        },
+        "persistence": {
+          "roc_auc": 0.5154,
+          "pr_auc": 0.0472,
+          "pr_auc_lift": 1.49,
+          "alert_days": 51,
+          "precision_at_alert": 0.0392,
+          "recall_at_alert": 0.25,
+          "f1_at_alert": 0.0678
+        },
+        "acled": {
+          "roc_auc": 0.5912,
+          "pr_auc": 0.0474,
+          "pr_auc_lift": 1.49,
+          "alert_days": 81,
+          "precision_at_alert": 0.0494,
+          "recall_at_alert": 0.5,
+          "f1_at_alert": 0.0899
+        },
+        "tweets": {
+          "roc_auc": 0.5113,
+          "pr_auc": 0.04,
+          "pr_auc_lift": 1.26,
+          "alert_days": 57,
+          "precision_at_alert": 0.0351,
+          "recall_at_alert": 0.25,
+          "f1_at_alert": 0.0616
+        },
+        "acled_tweets": {
+          "roc_auc": 0.5543,
+          "pr_auc": 0.0565,
+          "pr_auc_lift": 1.78,
+          "alert_days": 57,
+          "precision_at_alert": 0.0526,
+          "recall_at_alert": 0.375,
+          "f1_at_alert": 0.0923
+        },
+        "model_signals": {
+          "roc_auc": 0.5635,
+          "pr_auc": 0.057,
+          "pr_auc_lift": 1.8,
+          "alert_days": 50,
+          "precision_at_alert": 0.08,
+          "recall_at_alert": 0.5,
+          "f1_at_alert": 0.1379
+        },
+        "acled_tweets_model": {
+          "roc_auc": 0.519,
+          "pr_auc": 0.047,
+          "pr_auc_lift": 1.48,
+          "alert_days": 59,
+          "precision_at_alert": 0.0339,
+          "recall_at_alert": 0.25,
+          "f1_at_alert": 0.0597
+        }
+      },
+      "roc_auc_ci95_block_bootstrap": {
+        "persistence": [
+          0.293,
+          0.724
+        ],
+        "acled": [
+          0.363,
+          0.766
+        ],
+        "tweets": [
+          0.251,
+          0.807
+        ],
+        "acled_tweets": [
+          0.33,
+          0.818
+        ],
+        "model_signals": [
+          0.373,
+          0.78
+        ],
+        "acled_tweets_model": [
+          0.313,
+          0.769
+        ],
+        "diff_acled_tweets_minus_acled": [
+          -0.264,
+          0.259
+        ],
+        "diff_acled_tweets_model_minus_acled_tweets": [
+          -0.171,
+          0.047
+        ]
+      }
+    },
+    "h3": {
+      "n_scored": 250,
+      "positives": 23,
+      "base_rate": 0.092,
+      "models": {
+        "prevalence": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.092,
+          "pr_auc_lift": 1.0,
+          "alert_days": 0,
+          "precision_at_alert": 0.0,
+          "recall_at_alert": 0.0,
+          "f1_at_alert": 0.0
+        },
+        "persistence": {
+          "roc_auc": 0.5047,
+          "pr_auc": 0.111,
+          "pr_auc_lift": 1.21,
+          "alert_days": 50,
+          "precision_at_alert": 0.1,
+          "recall_at_alert": 0.2174,
+          "f1_at_alert": 0.137
+        },
+        "acled": {
+          "roc_auc": 0.5413,
+          "pr_auc": 0.108,
+          "pr_auc_lift": 1.17,
+          "alert_days": 81,
+          "precision_at_alert": 0.1111,
+          "recall_at_alert": 0.3913,
+          "f1_at_alert": 0.1731
+        },
+        "tweets": {
+          "roc_auc": 0.4252,
+          "pr_auc": 0.1013,
+          "pr_auc_lift": 1.1,
+          "alert_days": 16,
+          "precision_at_alert": 0.125,
+          "recall_at_alert": 0.087,
+          "f1_at_alert": 0.1026
+        },
+        "acled_tweets": {
+          "roc_auc": 0.5091,
+          "pr_auc": 0.1138,
+          "pr_auc_lift": 1.24,
+          "alert_days": 28,
+          "precision_at_alert": 0.1071,
+          "recall_at_alert": 0.1304,
+          "f1_at_alert": 0.1176
+        },
+        "model_signals": {
+          "roc_auc": 0.5003,
+          "pr_auc": 0.121,
+          "pr_auc_lift": 1.32,
+          "alert_days": 36,
+          "precision_at_alert": 0.1111,
+          "recall_at_alert": 0.1739,
+          "f1_at_alert": 0.1356
+        },
+        "acled_tweets_model": {
+          "roc_auc": 0.5062,
+          "pr_auc": 0.1686,
+          "pr_auc_lift": 1.83,
+          "alert_days": 29,
+          "precision_at_alert": 0.1724,
+          "recall_at_alert": 0.2174,
+          "f1_at_alert": 0.1923
+        }
+      },
+      "roc_auc_ci95_block_bootstrap": {
+        "persistence": [
+          0.325,
+          0.683
+        ],
+        "acled": [
+          0.366,
+          0.673
+        ],
+        "tweets": [
+          0.19,
+          0.704
+        ],
+        "acled_tweets": [
+          0.308,
+          0.717
+        ],
+        "model_signals": [
+          0.334,
+          0.687
+        ],
+        "acled_tweets_model": [
+          0.277,
+          0.745
+        ],
+        "diff_acled_tweets_minus_acled": [
+          -0.243,
+          0.213
+        ],
+        "diff_acled_tweets_model_minus_acled_tweets": [
+          -0.041,
+          0.046
+        ]
+      }
+    },
+    "h7": {
+      "n_scored": 246,
+      "positives": 50,
+      "base_rate": 0.2033,
+      "models": {
+        "prevalence": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.2033,
+          "pr_auc_lift": 1.0,
+          "alert_days": 0,
+          "precision_at_alert": 0.0,
+          "recall_at_alert": 0.0,
+          "f1_at_alert": 0.0
+        },
+        "persistence": {
+          "roc_auc": 0.4957,
+          "pr_auc": 0.2134,
+          "pr_auc_lift": 1.05,
+          "alert_days": 50,
+          "precision_at_alert": 0.16,
+          "recall_at_alert": 0.16,
+          "f1_at_alert": 0.16
+        },
+        "acled": {
+          "roc_auc": 0.5056,
+          "pr_auc": 0.2236,
+          "pr_auc_lift": 1.1,
+          "alert_days": 69,
+          "precision_at_alert": 0.1449,
+          "recall_at_alert": 0.2,
+          "f1_at_alert": 0.168
+        },
+        "tweets": {
+          "roc_auc": 0.4107,
+          "pr_auc": 0.2025,
+          "pr_auc_lift": 1.0,
+          "alert_days": 7,
+          "precision_at_alert": 0.4286,
+          "recall_at_alert": 0.06,
+          "f1_at_alert": 0.1053
+        },
+        "acled_tweets": {
+          "roc_auc": 0.5371,
+          "pr_auc": 0.2527,
+          "pr_auc_lift": 1.24,
+          "alert_days": 16,
+          "precision_at_alert": 0.25,
+          "recall_at_alert": 0.08,
+          "f1_at_alert": 0.1212
+        },
+        "model_signals": {
+          "roc_auc": 0.4835,
+          "pr_auc": 0.192,
+          "pr_auc_lift": 0.94,
+          "alert_days": 25,
+          "precision_at_alert": 0.28,
+          "recall_at_alert": 0.14,
+          "f1_at_alert": 0.1867
+        },
+        "acled_tweets_model": {
+          "roc_auc": 0.5534,
+          "pr_auc": 0.3227,
+          "pr_auc_lift": 1.59,
+          "alert_days": 15,
+          "precision_at_alert": 0.4667,
+          "recall_at_alert": 0.14,
+          "f1_at_alert": 0.2154
+        }
+      },
+      "roc_auc_ci95_block_bootstrap": {
+        "persistence": [
+          0.337,
+          0.644
+        ],
+        "acled": [
+          0.365,
+          0.656
+        ],
+        "tweets": [
+          0.223,
+          0.606
+        ],
+        "acled_tweets": [
+          0.367,
+          0.7
+        ],
+        "model_signals": [
+          0.328,
+          0.631
+        ],
+        "acled_tweets_model": [
+          0.373,
+          0.718
+        ],
+        "diff_acled_tweets_minus_acled": [
+          -0.21,
+          0.24
+        ],
+        "diff_acled_tweets_model_minus_acled_tweets": [
+          -0.018,
+          0.049
+        ]
+      }
+    }
+  }
+}

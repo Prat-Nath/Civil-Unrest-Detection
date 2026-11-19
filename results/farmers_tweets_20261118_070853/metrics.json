@@ -1,0 +1,117 @@
+{
+  "run_id": "20261118_070853",
+  "note": "silver = agreement with weak rules; gold = Claude-labelled sample, stratum-weighted, 95% bootstrap intervals",
+  "rule_baseline_gold": {
+    "precision": 0.9384,
+    "recall": 0.8379,
+    "f1": 0.8853,
+    "pr_auc": 0.797,
+    "roc_auc": 0.917,
+    "prevalence_est": 0.0661,
+    "threshold": 0.5,
+    "n_gold": 293,
+    "ci95": {
+      "precision": [
+        0.848,
+        0.97
+      ],
+      "recall": [
+        0.544,
+        0.993
+      ],
+      "f1": [
+        0.673,
+        0.977
+      ]
+    }
+  },
+  "tfidf": {
+    "threshold_from_silver_val": 0.5192,
+    "silver_val": {
+      "precision": 0.9549,
+      "recall": 0.7567,
+      "f1": 0.8443,
+      "pr_auc": 0.8921,
+      "roc_auc": 0.9137,
+      "n": 17888,
+      "positive_rate": 0.25,
+      "threshold": 0.5192
+    },
+    "silver_test": {
+      "precision": 0.9444,
+      "recall": 0.6742,
+      "f1": 0.7867,
+      "pr_auc": 0.8821,
+      "roc_auc": 0.884,
+      "n": 12287,
+      "positive_rate": 0.3652,
+      "threshold": 0.5192
+    },
+    "gold": {
+      "precision": 0.6735,
+      "recall": 0.8459,
+      "f1": 0.7499,
+      "pr_auc": 0.8859,
+      "roc_auc": 0.9817,
+      "prevalence_est": 0.0661,
+      "threshold": 0.5192,
+      "n_gold": 293,
+      "ci95": {
+        "precision": [
+          0.376,
+          0.908
+        ],
+        "recall": [
+          0.556,
+          0.997
+        ],
+        "f1": [
+          0.46,
+          0.935
+        ]
+      }
+    },
+    "gold_at_0.5": {
+      "precision": 0.6719,
+      "recall": 0.8459,
+      "f1": 0.7489,
+      "pr_auc": 0.8859,
+      "roc_auc": 0.9817,
+      "prevalence_est": 0.0661,
+      "threshold": 0.5,
+      "n_gold": 293
+    },
+    "gold_unweighted_precision_recall_f1": {
+      "precision": 0.5161,
+      "recall": 0.9231,
+      "f1": 0.6621
+    },
+    "top_terms": [
+      "violence",
+      "goons",
+      "killed",
+      "riots",
+      "violent",
+      "police",
+      "brutality",
+      "attacked",
+      "modimurderingfarmers",
+      "murder",
+      "rape",
+      "attacking",
+      "patriotism",
+      "bjpgoonsattackingfarmers",
+      "brutal",
+      "beating",
+      "beaten",
+      "patriotic",
+      "patriots",
+      "delhiriots",
+      "patriot",
+      "bjpkilleddemocracy",
+      "murderer",
+      "injured",
+      "attack on"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 08:43:41 | INFO     | farmers_make_unseen | log_environment:76 | Package       : torch not installed
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : from_date = 2021-10-01
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : log_dir = None
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : n_none = 100
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : n_strong = 100
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : n_weak = 100
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : out_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_unseen
+2026-11-18 08:43:42 | INFO     | farmers_make_unseen | log_environment:79 | Arg           : seed = 7
+2026-11-18 08:43:43 | INFO     | farmers_make_unseen | main:49 | excluding 80414 tweets already used for training, validation, testing or the gold sample
+2026-11-18 08:44:01 | INFO     | farmers_make_unseen | main:61 | eligible tweets from 2021-10-01: 49857  ({'none': 33321, 'weak_only': 10669, 'strong': 5867})
+2026-11-18 08:44:01 | INFO     | farmers_make_unseen | main:77 | wrote 300 tweets to /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_unseen

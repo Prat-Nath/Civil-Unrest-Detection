@@ -1,0 +1,35 @@
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:66 | Python        : 3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:67 | Platform      : Linux-6.18.44-fc-v553-x86_64-with-glibc2.39
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:68 | Executable    : /usr/local/bin/python3
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:69 | Working dir   : /home/claude/NLP
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:70 | Project root  : /home/claude/NLP
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:74 | Package       : numpy 2.5.3
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:74 | Package       : pandas 3.0.5
+2026-11-17 18:58:39 | INFO     | social_panel | log_environment:74 | Package       : sklearn 1.9.1
+2026-11-17 18:58:41 | INFO     | social_panel | log_environment:74 | Package       : torch 2.15.0+cu132
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : baseline_days = 28
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : gap_days = 30
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : horizons = [1, 3, 7]
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : input = /home/claude/NLP/data/social_processed/country_day.csv
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : log_dir = None
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : min_related = 20
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : output_dir = /home/claude/NLP/data/social_processed
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : test_frac = 0.15
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : val_frac = 0.15
+2026-11-17 18:58:45 | INFO     | social_panel | log_environment:79 | Arg           : z_threshold = 2.0
+2026-11-17 18:58:45 | INFO     | social_panel | main:111 | === SOCIAL PANEL started (run 20261117_185839) | log file: /home/claude/NLP/logs/social_panel/social_panel_20261117_185839.log ===
+2026-11-17 18:58:45 | INFO     | social_panel | timed_step:85 | START  load country_day.csv
+2026-11-17 18:58:45 | INFO     | social_panel | main:115 | rows=41,422 | countries=42 | dates 2014-01-01 .. 2017-12-31
+2026-11-17 18:58:45 | INFO     | social_panel | main:119 | segments (continuous stretches of data): {0: ('2014-01-01', '2015-12-31'), 1: ('2017-01-01', '2017-12-31')}
+2026-11-17 18:58:45 | INFO     | social_panel | timed_step:92 | DONE   load country_day.csv (0.1s)
+2026-11-17 18:58:45 | INFO     | social_panel | timed_step:85 | START  build features and targets per country and segment
+2026-11-17 18:58:47 | INFO     | social_panel | main:125 | panel rows (complete daily grid): 43,028
+2026-11-17 18:58:47 | INFO     | social_panel | timed_step:92 | DONE   build features and targets per country and segment (1.5s)
+2026-11-17 18:58:47 | INFO     | social_panel | main:134 | chronological cut dates: val starts 2017-02-23, test starts 2017-07-29
+2026-11-17 18:58:47 | INFO     | social_panel | main:159 | train rows=26,626 2014-01-29..2017-02-22 | positive rate by horizon {'h1': 0.0292, 'h3': 0.0814, 'h7': 0.1703}
+2026-11-17 18:58:47 | INFO     | social_panel | main:159 | val   rows=6,378 2017-02-23..2017-07-28 | positive rate by horizon {'h1': 0.0235, 'h3': 0.0663, 'h7': 0.1446}
+2026-11-17 18:58:47 | INFO     | social_panel | main:159 | test  rows=6,338 2017-07-29..2017-12-31 | positive rate by horizon {'h1': 0.0245, 'h3': 0.0684, 'h7': 0.1457}
+2026-11-17 18:58:47 | INFO     | social_panel | timed_step:85 | START  write panel.csv.gz
+2026-11-17 18:58:50 | INFO     | social_panel | timed_step:92 | DONE   write panel.csv.gz (3.2s)
+2026-11-17 18:58:50 | INFO     | social_panel | main:167 | === SOCIAL PANEL finished successfully ===

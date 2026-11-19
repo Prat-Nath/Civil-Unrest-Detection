@@ -1,0 +1,75 @@
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:27:35 | INFO     | farmers_train_tweets | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:27:38 | INFO     | farmers_train_tweets | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : base_model = distilroberta-base
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : batch_size = 32
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : cue_dropout = 0.5
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : epochs = 2
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : labels_dir = E:\ai\NLP\data\farmers_labels
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : log_dir = None
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : lr = 2e-05
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_eval = 0
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_length = 64
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_train = 0
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : model = transformer
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : per_day = 300
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : score_daily = True
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : seed = 42
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | main:181 | === FARMERS TRAIN TWEETS started (run 20261118_132735) ===
+2026-11-18 13:27:40 | INFO     | farmers_train_tweets | timed_step:85 | START  load data
+2026-11-18 13:27:41 | INFO     | farmers_train_tweets | main:199 | train 49946 (33.8% violent) | val 17888 | test 12287 | gold 293 (52 violent by Claude's labels)
+2026-11-18 13:27:41 | INFO     | farmers_train_tweets | timed_step:92 | DONE   load data (1.6s)
+2026-11-18 13:27:42 | INFO     | farmers_train_tweets | main:207 | rule baseline on gold: {'precision': 0.9384, 'recall': 0.8379, 'f1': 0.8853, 'pr_auc': 0.797, 'roc_auc': 0.917, 'prevalence_est': 0.0661, 'threshold': 0.5, 'n_gold': 293, 'ci95': {'precision': [0.848, 0.97], 'recall': [0.544, 0.993], 'f1': [0.673, 0.977]}}
+2026-11-18 13:27:42 | INFO     | farmers_train_tweets | timed_step:85 | START  train + evaluate transformer
+2026-11-18 13:27:44 | INFO     | farmers_train_tweets | transformer_fit_predict:91 | device: cuda
+2026-11-18 13:27:55 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 0/1561 loss 0.6496 (3s)
+2026-11-18 13:28:07 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 100/1561 loss 0.6052 (15s)
+2026-11-18 13:28:19 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 200/1561 loss 0.4588 (26s)
+2026-11-18 13:28:31 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 300/1561 loss 0.3765 (38s)
+2026-11-18 13:28:43 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 400/1561 loss 0.3165 (50s)
+2026-11-18 13:28:55 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 500/1561 loss 0.2780 (63s)
+2026-11-18 13:29:07 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 600/1561 loss 0.2487 (75s)
+2026-11-18 13:29:20 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 700/1561 loss 0.2289 (87s)
+2026-11-18 13:29:32 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 800/1561 loss 0.2106 (100s)
+2026-11-18 13:29:44 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 900/1561 loss 0.1961 (112s)
+2026-11-18 13:29:57 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1000/1561 loss 0.1829 (124s)
+2026-11-18 13:30:09 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1100/1561 loss 0.1718 (137s)
+2026-11-18 13:30:22 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1200/1561 loss 0.1645 (149s)
+2026-11-18 13:30:34 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1300/1561 loss 0.1581 (162s)
+2026-11-18 13:30:47 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1400/1561 loss 0.1518 (174s)
+2026-11-18 13:30:59 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 1 step 1500/1561 loss 0.1472 (187s)
+2026-11-18 13:31:53 | INFO     | farmers_train_tweets | transformer_fit_predict:146 | epoch 1 done | train loss 0.1436 | val F1 0.9499 (thr 0.121)
+2026-11-18 13:31:57 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 0/1561 loss 0.0044 (244s)
+2026-11-18 13:32:09 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 100/1561 loss 0.0503 (257s)
+2026-11-18 13:32:22 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 200/1561 loss 0.0521 (269s)
+2026-11-18 13:32:34 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 300/1561 loss 0.0553 (282s)
+2026-11-18 13:32:47 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 400/1561 loss 0.0561 (295s)
+2026-11-18 13:33:00 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 500/1561 loss 0.0536 (307s)
+2026-11-18 13:33:13 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 600/1561 loss 0.0543 (320s)
+2026-11-18 13:33:25 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 700/1561 loss 0.0525 (333s)
+2026-11-18 13:33:38 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 800/1561 loss 0.0504 (346s)
+2026-11-18 13:33:51 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 900/1561 loss 0.0506 (358s)
+2026-11-18 13:34:03 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1000/1561 loss 0.0511 (371s)
+2026-11-18 13:34:16 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1100/1561 loss 0.0509 (384s)
+2026-11-18 13:34:30 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1200/1561 loss 0.0505 (397s)
+2026-11-18 13:34:42 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1300/1561 loss 0.0506 (410s)
+2026-11-18 13:34:55 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1400/1561 loss 0.0501 (422s)
+2026-11-18 13:35:07 | INFO     | farmers_train_tweets | transformer_fit_predict:141 | epoch 2 step 1500/1561 loss 0.0492 (435s)
+2026-11-18 13:35:30 | INFO     | farmers_train_tweets | transformer_fit_predict:146 | epoch 2 done | train loss 0.0495 | val F1 0.9401 (thr 0.071)
+2026-11-18 13:35:30 | INFO     | farmers_train_tweets | transformer_fit_predict:152 | best epoch 1 (val F1 0.9499)
+2026-11-18 13:36:04 | INFO     | farmers_train_tweets | main:228 | transformer | silver test F1 0.948 | GOLD weighted P 0.405 R 0.989 F1 0.574 (CI [0.316, 0.757]) PR-AUC 0.876
+2026-11-18 13:36:04 | INFO     | farmers_train_tweets | main:236 | model saved to E:\ai\NLP\models\farmers_transformer_20261118_132735
+2026-11-18 13:36:04 | INFO     | farmers_train_tweets | timed_step:85 | START  score daily sample (transformer)
+2026-11-18 13:36:13 | INFO     | farmers_train_tweets | score_daily:172 | scoring 109081 tweets (<= 300 per day, 386 days)
+2026-11-18 13:38:21 | INFO     | farmers_train_tweets | main:245 | daily signals: 386 days -> daily_signals_transformer.csv
+2026-11-18 13:38:21 | INFO     | farmers_train_tweets | timed_step:92 | DONE   score daily sample (transformer) (136.8s)
+2026-11-18 13:38:21 | INFO     | farmers_train_tweets | timed_step:92 | DONE   train + evaluate transformer (639.6s)
+2026-11-18 13:38:21 | INFO     | farmers_train_tweets | main:247 | Wrote E:\ai\NLP\results\farmers_tweets_20261118_132735
+2026-11-18 13:38:21 | INFO     | farmers_train_tweets | main:248 | === FARMERS TRAIN TWEETS finished successfully ===

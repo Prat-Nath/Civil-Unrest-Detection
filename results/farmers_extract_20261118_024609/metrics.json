@@ -1,0 +1,81 @@
+{
+  "run_id": "20261118_024609",
+  "tweets": 1084452,
+  "days": 386,
+  "event_types": {
+    "bharat_bandh": {
+      "tweets_mentioning": 9714,
+      "acled_events_matching": 423,
+      "spearman_daily": 0.225,
+      "precision_at_10_days": 0.5,
+      "share_of_all_days_with_acled_event": 0.021
+    },
+    "chakka_jaam": {
+      "tweets_mentioning": 6500,
+      "acled_events_matching": 230,
+      "spearman_daily": 0.182,
+      "precision_at_10_days": 0.2,
+      "share_of_all_days_with_acled_event": 0.01
+    },
+    "rail_roko": {
+      "tweets_mentioning": 2296,
+      "acled_events_matching": 157,
+      "spearman_daily": 0.212,
+      "precision_at_10_days": 0.4,
+      "share_of_all_days_with_acled_event": 0.171
+    },
+    "tractor_rally": {
+      "tweets_mentioning": 27276,
+      "acled_events_matching": 31,
+      "spearman_daily": 0.173,
+      "precision_at_10_days": 0.4,
+      "share_of_all_days_with_acled_event": 0.054
+    },
+    "mahapanchayat": {
+      "tweets_mentioning": 5534,
+      "acled_events_matching": 37,
+      "spearman_daily": 0.34,
+      "precision_at_10_days": 0.4,
+      "share_of_all_days_with_acled_event": 0.078
+    },
+    "road_blockade": {
+      "tweets_mentioning": 795,
+      "acled_events_matching": 269,
+      "spearman_daily": 0.142,
+      "precision_at_10_days": 0.3,
+      "share_of_all_days_with_acled_event": 0.07
+    },
+    "police_force": {
+      "tweets_mentioning": 7457,
+      "acled_events_matching": 71,
+      "spearman_daily": 0.356,
+      "precision_at_10_days": 0.5,
+      "share_of_all_days_with_acled_event": 0.08
+    },
+    "clash": {
+      "tweets_mentioning": 18384,
+      "acled_events_matching": 358,
+      "spearman_daily": 0.322,
+      "precision_at_10_days": 0.5,
+      "share_of_all_days_with_acled_event": 0.233
+    },
+    "hunger_strike_dharna": {
+      "tweets_mentioning": 5549,
+      "acled_events_matching": 238,
+      "spearman_daily": 0.107,
+      "precision_at_10_days": 0.7,
+      "share_of_all_days_with_acled_event": 0.342
+    }
+  },
+  "places": {
+    "spearman_state_day": 0.343,
+    "spearman_state_month": 0.496,
+    "busy_days_n": 52,
+    "top_state_match": 0.096,
+    "acled_top_state_in_tweets_top3": 0.519,
+    "always_predict_most_mentioned_state_overall": {
+      "state": "Delhi",
+      "accuracy": 0.038
+    }
+  }
+}

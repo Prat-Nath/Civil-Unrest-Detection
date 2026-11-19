@@ -1,0 +1,39 @@
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:67 | Platform      : Linux-6.8.0-138-generic-x86_64-with-glibc2.35
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-17 18:43:04 | INFO     | social_aggregate | log_environment:74 | Package       : numpy 2.2.6
+2026-11-17 18:43:05 | INFO     | social_aggregate | log_environment:74 | Package       : pandas 2.3.3
+2026-11-17 18:43:06 | INFO     | social_aggregate | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-17 18:43:06 | INFO     | social_aggregate | log_environment:76 | Package       : torch not installed
+2026-11-17 18:43:07 | INFO     | social_aggregate | log_environment:74 | Package       : transformers 5.20.2
+2026-11-17 18:43:08 | INFO     | social_aggregate | log_environment:79 | Arg           : input_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/social
+2026-11-17 18:43:08 | INFO     | social_aggregate | log_environment:79 | Arg           : log_dir = None
+2026-11-17 18:43:08 | INFO     | social_aggregate | log_environment:79 | Arg           : max_lines = 500000
+2026-11-17 18:43:08 | INFO     | social_aggregate | log_environment:79 | Arg           : output_dir = /tmp/social_test
+2026-11-17 18:43:08 | INFO     | social_aggregate | log_environment:79 | Arg           : progress_every = 250000
+2026-11-17 18:43:08 | INFO     | social_aggregate | main:51 | === SOCIAL AGGREGATE started (run 20261117_184304) | log file: /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/logs/social_aggregate/social_aggregate_20261117_184304.log ===
+2026-11-17 18:43:08 | INFO     | social_aggregate | main:57 | Input files: ['tweets_2014.json.gz', 'tweets_2015.json.gz', 'tweets_2017.json.gz']
+2026-11-17 18:43:08 | INFO     | social_aggregate | timed_step:85 | START  read tweets_2014.json.gz
+2026-11-17 18:43:09 | INFO     | social_aggregate | main:113 | tweets_2014.json.gz: 250,000 lines | 17 cells | 196031 lines/s
+2026-11-17 18:43:10 | INFO     | social_aggregate | main:113 | tweets_2014.json.gz: 500,000 lines | 35 cells | 194219 lines/s
+2026-11-17 18:43:10 | INFO     | social_aggregate | timed_step:92 | DONE   read tweets_2014.json.gz (2.6s)
+2026-11-17 18:43:10 | INFO     | social_aggregate | main:114 | tweets_2014.json.gz: 500,000 valid lines
+2026-11-17 18:43:10 | INFO     | social_aggregate | timed_step:85 | START  read tweets_2015.json.gz
+2026-11-17 18:43:11 | INFO     | social_aggregate | main:113 | tweets_2015.json.gz: 250,000 lines | 147 cells | 193199 lines/s
+2026-11-17 18:43:13 | INFO     | social_aggregate | main:113 | tweets_2015.json.gz: 500,000 lines | 244 cells | 194147 lines/s
+2026-11-17 18:43:13 | INFO     | social_aggregate | timed_step:92 | DONE   read tweets_2015.json.gz (2.6s)
+2026-11-17 18:43:13 | INFO     | social_aggregate | main:114 | tweets_2015.json.gz: 500,000 valid lines
+2026-11-17 18:43:13 | INFO     | social_aggregate | timed_step:85 | START  read tweets_2017.json.gz
+2026-11-17 18:43:14 | INFO     | social_aggregate | main:113 | tweets_2017.json.gz: 250,000 lines | 356 cells | 193121 lines/s
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:113 | tweets_2017.json.gz: 500,000 lines | 442 cells | 193417 lines/s
+2026-11-17 18:43:15 | INFO     | social_aggregate | timed_step:92 | DONE   read tweets_2017.json.gz (2.6s)
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:114 | tweets_2017.json.gz: 500,000 valid lines
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:116 | Total valid lines: 1,500,000 | malformed: 0 | country-day cells: 442
+2026-11-17 18:43:15 | INFO     | social_aggregate | timed_step:85 | START  write country_day.csv
+2026-11-17 18:43:15 | INFO     | social_aggregate | timed_step:92 | DONE   write country_day.csv (0.0s)
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:144 | Related share overall: 0.0732
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:145 | Score threshold check: min score among related=0.5000, max among unrelated=0.5000
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:147 | Wrote /tmp/social_test/country_day.csv
+2026-11-17 18:43:15 | INFO     | social_aggregate | main:148 | === SOCIAL AGGREGATE finished successfully in 7.8s ===

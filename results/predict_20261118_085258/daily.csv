@@ -1,0 +1,3 @@
+﻿date,posts,mean_violence_score,share_violent,percentile_vs_archive_days,note
+2021-12-03,3,0.6241,0.333,100.0,few posts: treat as noisy
+2021-12-04,3,0.4467,0.333,99.7,few posts: treat as noisy

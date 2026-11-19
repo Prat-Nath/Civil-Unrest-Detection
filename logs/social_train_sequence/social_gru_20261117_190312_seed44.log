@@ -1,0 +1,58 @@
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:66 | Python        : 3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:67 | Platform      : Linux-6.18.44-fc-v553-x86_64-with-glibc2.39
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:68 | Executable    : /usr/local/bin/python3
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:69 | Working dir   : /home/claude/NLP
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:70 | Project root  : /home/claude/NLP
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:74 | Package       : numpy 2.5.3
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:74 | Package       : pandas 3.0.5
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:74 | Package       : sklearn 1.9.1
+2026-11-17 19:03:12 | INFO     | social_train_sequence | log_environment:74 | Package       : torch 2.15.0+cu132
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : arch = gru
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : batch_size = 256
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : d_model = 64
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : dropout = 0.2
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : epochs = 40
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : heads = 4
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : horizons = [1, 3, 7]
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : layers = 2
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : log_dir = None
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : lr = 0.001
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : max_train_samples = None
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : models_dir = /home/claude/NLP/models
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : panel = /home/claude/NLP/data/social_processed/panel.csv.gz
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : patience = 6
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : results_dir = /home/claude/NLP/results
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : seed = 44
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : weight_decay = 0.01
+2026-11-17 19:03:13 | INFO     | social_train_sequence | log_environment:79 | Arg           : window = 28
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:119 | === SOCIAL TRAIN SEQUENCE started (social_gru_20261117_190312_seed44) | log file: /home/claude/NLP/logs/social_train_sequence/social_gru_20261117_190312_seed44.log ===
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:122 | Device: cpu
+2026-11-17 19:03:13 | INFO     | social_train_sequence | timed_step:85 | START  build windows
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:127 | examples: 39258 | window=28 | features=10 | horizons=[1, 3, 7]
+2026-11-17 19:03:13 | INFO     | social_train_sequence | timed_step:92 | DONE   build windows (0.3s)
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:138 | train/val/test examples: 26584/6378/6296
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:145 | h=1 train positive rate 0.0292 -> pos_weight 33.2
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:145 | h=3 train positive rate 0.0814 -> pos_weight 11.3
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:145 | h=7 train positive rate 0.1703 -> pos_weight 4.9
+2026-11-17 19:03:13 | INFO     | social_train_sequence | main:149 | Model: gru | parameters: 50,947
+2026-11-17 19:03:20 | INFO     | social_train_sequence | main:185 | epoch  1 | train_loss 1.1095 | val PR-AUC mean 0.1437 {'h1': 0.063, 'h3': 0.1306, 'h7': 0.2375} | 6s  <- best, saved
+2026-11-17 19:03:26 | INFO     | social_train_sequence | main:185 | epoch  2 | train_loss 1.0518 | val PR-AUC mean 0.1501 {'h1': 0.0679, 'h3': 0.1349, 'h7': 0.2475} | 11s  <- best, saved
+2026-11-17 19:03:31 | INFO     | social_train_sequence | main:185 | epoch  3 | train_loss 1.0270 | val PR-AUC mean 0.1615 {'h1': 0.0719, 'h3': 0.1505, 'h7': 0.262} | 17s  <- best, saved
+2026-11-17 19:03:37 | INFO     | social_train_sequence | main:185 | epoch  4 | train_loss 1.0157 | val PR-AUC mean 0.1634 {'h1': 0.0756, 'h3': 0.1522, 'h7': 0.2624} | 23s  <- best, saved
+2026-11-17 19:03:43 | INFO     | social_train_sequence | main:185 | epoch  5 | train_loss 1.0078 | val PR-AUC mean 0.1644 {'h1': 0.0733, 'h3': 0.1517, 'h7': 0.2683} | 29s  <- best, saved
+2026-11-17 19:03:49 | INFO     | social_train_sequence | main:185 | epoch  6 | train_loss 0.9983 | val PR-AUC mean 0.1576 {'h1': 0.0722, 'h3': 0.1449, 'h7': 0.2556} | 35s
+2026-11-17 19:03:54 | INFO     | social_train_sequence | main:185 | epoch  7 | train_loss 0.9906 | val PR-AUC mean 0.1591 {'h1': 0.0732, 'h3': 0.1485, 'h7': 0.2557} | 40s
+2026-11-17 19:04:00 | INFO     | social_train_sequence | main:185 | epoch  8 | train_loss 0.9805 | val PR-AUC mean 0.1487 {'h1': 0.0694, 'h3': 0.1332, 'h7': 0.2434} | 46s
+2026-11-17 19:04:06 | INFO     | social_train_sequence | main:185 | epoch  9 | train_loss 0.9694 | val PR-AUC mean 0.1691 {'h1': 0.0777, 'h3': 0.1609, 'h7': 0.2689} | 52s  <- best, saved
+2026-11-17 19:04:12 | INFO     | social_train_sequence | main:185 | epoch 10 | train_loss 0.9557 | val PR-AUC mean 0.1477 {'h1': 0.0698, 'h3': 0.1351, 'h7': 0.2381} | 57s
+2026-11-17 19:04:17 | INFO     | social_train_sequence | main:185 | epoch 11 | train_loss 0.9375 | val PR-AUC mean 0.1426 {'h1': 0.0636, 'h3': 0.1278, 'h7': 0.2364} | 63s
+2026-11-17 19:04:23 | INFO     | social_train_sequence | main:185 | epoch 12 | train_loss 0.9142 | val PR-AUC mean 0.1542 {'h1': 0.0704, 'h3': 0.1388, 'h7': 0.2532} | 69s
+2026-11-17 19:04:29 | INFO     | social_train_sequence | main:185 | epoch 13 | train_loss 0.8994 | val PR-AUC mean 0.1425 {'h1': 0.0649, 'h3': 0.1258, 'h7': 0.2367} | 74s
+2026-11-17 19:04:34 | INFO     | social_train_sequence | main:185 | epoch 14 | train_loss 0.8759 | val PR-AUC mean 0.1443 {'h1': 0.0626, 'h3': 0.1258, 'h7': 0.2444} | 80s
+2026-11-17 19:04:40 | INFO     | social_train_sequence | main:185 | epoch 15 | train_loss 0.8707 | val PR-AUC mean 0.1338 {'h1': 0.0594, 'h3': 0.1189, 'h7': 0.2232} | 86s
+2026-11-17 19:04:40 | INFO     | social_train_sequence | main:193 | Early stopping (no improvement for 6 epochs)
+2026-11-17 19:04:41 | INFO     | social_train_sequence | main:205 | TEST seq_gru h=1 | n=6296 pos=154 (2.4%) | P=0.131 R=0.299 F1=0.183 | PR-AUC=0.117 (x4.8 over base) ROC-AUC=0.809 | thr=0.783 | CM=[[5838, 304], [108, 46]]
+2026-11-17 19:04:41 | INFO     | social_train_sequence | main:205 | TEST seq_gru h=3 | n=6212 pos=425 (6.8%) | P=0.187 R=0.449 F1=0.264 | PR-AUC=0.175 (x2.6 over base) ROC-AUC=0.764 | thr=0.645 | CM=[[4954, 833], [234, 191]]
+2026-11-17 19:04:41 | INFO     | social_train_sequence | main:205 | TEST seq_gru h=7 | n=6046 pos=881 (14.6%) | P=0.251 R=0.687 F1=0.367 | PR-AUC=0.278 (x1.9 over base) ROC-AUC=0.739 | thr=0.508 | CM=[[3356, 1809], [276, 605]]
+2026-11-17 19:04:41 | INFO     | social_train_sequence | main:222 | === SOCIAL TRAIN SEQUENCE finished successfully in 86s ===

@@ -1,0 +1,109 @@
+{
+  "model": "distilroberta-base_binary_20261117_015913",
+  "mask_cues": false,
+  "threshold": 0.8175744414329529,
+  "tweets_scored": 9440,
+  "days": 386,
+  "tweet_level": {
+    "mean_p": 0.0203,
+    "share_ge_0.5": 0.0174,
+    "share_ge_thr": 0.0133,
+    "quantiles": {
+      "0.5": 0.0002,
+      "0.9": 0.0035,
+      "0.99": 0.9546
+    }
+  },
+  "day_level": {
+    "model_mean_p": {
+      "acled_farmer_violent": {
+        "spearman": 0.008,
+        "roc_auc_day_has_event": 0.508
+      },
+      "acled_farmer_riot": {
+        "spearman": 0.016,
+        "roc_auc_day_has_event": 0.515
+      },
+      "acled_farmer": {
+        "spearman": -0.036,
+        "roc_auc_day_has_event": 0.36
+      },
+      "surge": {
+        "spearman": -0.009,
+        "roc_auc_day_has_event": 0.487
+      }
+    },
+    "model_share_p_ge_0.5": {
+      "acled_farmer_violent": {
+        "spearman": 0.034,
+        "roc_auc_day_has_event": 0.516
+      },
+      "acled_farmer_riot": {
+        "spearman": 0.047,
+        "roc_auc_day_has_event": 0.528
+      },
+      "acled_farmer": {
+        "spearman": -0.012,
+        "roc_auc_day_has_event": 0.42
+      },
+      "surge": {
+        "spearman": -0.038,
+        "roc_auc_day_has_event": 0.453
+      }
+    },
+    "model_p90": {
+      "acled_farmer_violent": {
+        "spearman": 0.017,
+        "roc_auc_day_has_event": 0.518
+      },
+      "acled_farmer_riot": {
+        "spearman": 0.037,
+        "roc_auc_day_has_event": 0.529
+      },
+      "acled_farmer": {
+        "spearman": -0.021,
+        "roc_auc_day_has_event": 0.46
+      },
+      "surge": {
+        "spearman": 0.027,
+        "roc_auc_day_has_event": 0.54
+      }
+    },
+    "keyword_violence_share": {
+      "acled_farmer_violent": {
+        "spearman": 0.065,
+        "roc_auc_day_has_event": 0.538
+      },
+      "acled_farmer_riot": {
+        "spearman": 0.077,
+        "roc_auc_day_has_event": 0.551
+      },
+      "acled_farmer": {
+        "spearman": 0.101,
+        "roc_auc_day_has_event": 0.494
+      },
+      "surge": {
+        "spearman": -0.008,
+        "roc_auc_day_has_event": 0.489
+      }
+    },
+    "tweet_volume": {
+      "acled_farmer_violent": {
+        "spearman": 0.231,
+        "roc_auc_day_has_event": 0.609
+      },
+      "acled_farmer_riot": {
+        "spearman": 0.19,
+        "roc_auc_day_has_event": 0.623
+      },
+      "acled_farmer": {
+        "spearman": 0.289,
+        "roc_auc_day_has_event": 0.658
+      },
+      "surge": {
+        "spearman": 0.161,
+        "roc_auc_day_has_event": 0.741
+      }
+    }
+  }
+}

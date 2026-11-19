@@ -1,0 +1,15 @@
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 12:31:15 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 12:31:17 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 12:31:20 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : labels = data\farmers_labels\gold_claude.csv
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : log_dir = None
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : run = results\farmers_transfer_20261118_021926
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : threshold = 0.5
+2026-11-18 12:31:22 | INFO     | farmers_transfer_eval | main:64 | hand-label evaluation: {'labelled': 287, 'positives_labelled': 50, 'threshold': 0.5, 'precision_weighted': 0.0, 'recall_weighted': 0.0, 'f1_weighted': 0.0, 'unweighted_precision': None, 'estimated_violent_share_of_tweets': nan}

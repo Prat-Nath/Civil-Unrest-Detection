@@ -1,0 +1,11 @@
+{
+  "labelled": 293,
+  "positives_labelled": 52,
+  "threshold": 0.5,
+  "precision_weighted": 0.398,
+  "recall_weighted": 0.094,
+  "f1_weighted": 0.153,
+  "unweighted_precision": 0.398,
+  "estimated_violent_share_of_tweets": 0.0665,
+  "labels_file": "gold_claude.csv"
+}

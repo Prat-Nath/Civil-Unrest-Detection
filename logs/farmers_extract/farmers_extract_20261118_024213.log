@@ -1,0 +1,44 @@
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:76 | Package       : torch not installed
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:79 | Arg           : acled = None
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:79 | Arg           : chunk = 150000
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:79 | Arg           : log_dir = None
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:79 | Arg           : max_rows = 0
+2026-11-18 02:42:13 | INFO     | farmers_extract | log_environment:79 | Arg           : tweets = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_processed/tweets_text.csv.gz
+2026-11-18 02:42:13 | INFO     | farmers_extract | main:49 | === FARMERS EXTRACT started (run 20261118_024213) ===
+2026-11-18 02:42:13 | INFO     | farmers_extract | timed_step:85 | START  extract from tweets
+2026-11-18 02:42:27 | INFO     | farmers_extract | main:65 | chunk 0: 150000 tweets
+2026-11-18 02:42:40 | INFO     | farmers_extract | main:65 | chunk 1: 300000 tweets
+2026-11-18 02:42:54 | INFO     | farmers_extract | main:65 | chunk 2: 450000 tweets
+2026-11-18 02:43:09 | INFO     | farmers_extract | main:65 | chunk 3: 600000 tweets
+2026-11-18 02:43:23 | INFO     | farmers_extract | main:65 | chunk 4: 749994 tweets
+2026-11-18 02:43:36 | INFO     | farmers_extract | main:65 | chunk 5: 899994 tweets
+2026-11-18 02:43:50 | INFO     | farmers_extract | main:65 | chunk 6: 1049994 tweets
+2026-11-18 02:43:53 | INFO     | farmers_extract | main:65 | chunk 7: 1084452 tweets
+2026-11-18 02:43:53 | INFO     | farmers_extract | main:71 | tweets: 1084452 | days 2020-11-01..2021-11-21
+2026-11-18 02:43:53 | INFO     | farmers_extract | timed_step:92 | DONE   extract from tweets (99.9s)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:74 | ACLED India events in window: 19679 (farmer-related 5257)
+2026-11-18 02:43:55 | INFO     | farmers_extract | timed_step:85 | START  event types vs ACLED
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | bharat_bandh           tweets=   9714 acled=  423 spearman=0.225 P@10=0.50 (chance 0.02)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | chakka_jaam            tweets=   4690 acled=    0 spearman=None P@10=0.00 (chance 0.00)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | rail_roko              tweets=   2296 acled=  157 spearman=0.212 P@10=0.40 (chance 0.17)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | tractor_rally          tweets=  27276 acled=   31 spearman=0.173 P@10=0.40 (chance 0.05)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | mahapanchayat          tweets=   5534 acled=   37 spearman=0.34 P@10=0.40 (chance 0.08)
+2026-11-18 02:43:55 | INFO     | farmers_extract | main:92 | road_blockade          tweets=    795 acled=  269 spearman=0.142 P@10=0.30 (chance 0.07)
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:92 | police_force           tweets=   7457 acled=   71 spearman=0.356 P@10=0.50 (chance 0.08)
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:92 | clash                  tweets=  18384 acled=  358 spearman=0.322 P@10=0.50 (chance 0.23)
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:92 | hunger_strike_dharna   tweets=   5549 acled=  238 spearman=0.107 P@10=0.70 (chance 0.34)
+2026-11-18 02:43:56 | INFO     | farmers_extract | timed_step:92 | DONE   event types vs ACLED (1.4s)
+2026-11-18 02:43:56 | INFO     | farmers_extract | timed_step:85 | START  places vs ACLED
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:126 | places: {'spearman_state_day': 0.343, 'spearman_state_month': 0.496, 'busy_days_n': 52, 'top_state_match': 0.096, 'acled_top_state_in_tweets_top3': 0.519, 'always_predict_most_mentioned_state_overall': {'state': 'Delhi', 'accuracy': 0.038}}
+2026-11-18 02:43:56 | INFO     | farmers_extract | timed_step:92 | DONE   places vs ACLED (0.1s)
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:128 | Wrote /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/results/farmers_extract_20261118_024213
+2026-11-18 02:43:56 | INFO     | farmers_extract | main:129 | === FARMERS EXTRACT finished successfully ===

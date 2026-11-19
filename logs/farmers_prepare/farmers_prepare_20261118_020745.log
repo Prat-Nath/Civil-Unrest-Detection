@@ -1,0 +1,31 @@
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 02:07:45 | INFO     | farmers_prepare | log_environment:76 | Package       : torch not installed
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : acled = None
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : chunk = 200000
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : log_dir = None
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : max_rows = 0
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : out_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_processed
+2026-11-18 02:07:46 | INFO     | farmers_prepare | log_environment:79 | Arg           : zip = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/tweets/archive.zip
+2026-11-18 02:07:46 | INFO     | farmers_prepare | main:86 | === FARMERS PREPARE started (run 20261118_020745) ===
+2026-11-18 02:07:46 | INFO     | farmers_prepare | main:89 | ACLED file: ACLED Data_2026-11-01_event_date_from_2018-01-01_event_date_to_2025-11-01 (1).csv
+2026-11-18 02:07:46 | INFO     | farmers_prepare | timed_step:85 | START  stream tweets
+2026-11-18 02:08:03 | INFO     | farmers_prepare | main:124 | chunk 0: 200000 rows total (17s)
+2026-11-18 02:08:18 | INFO     | farmers_prepare | main:124 | chunk 1: 400000 rows total (32s)
+2026-11-18 02:08:34 | INFO     | farmers_prepare | main:124 | chunk 2: 600000 rows total (48s)
+2026-11-18 02:08:49 | INFO     | farmers_prepare | main:124 | chunk 3: 800000 rows total (63s)
+2026-11-18 02:09:04 | INFO     | farmers_prepare | main:124 | chunk 4: 1000000 rows total (78s)
+2026-11-18 02:09:10 | INFO     | farmers_prepare | main:124 | chunk 5: 1084452 rows total (84s)
+2026-11-18 02:09:10 | INFO     | farmers_prepare | timed_step:92 | DONE   stream tweets (84.4s)
+2026-11-18 02:09:10 | INFO     | farmers_prepare | timed_step:85 | START  daily aggregate
+2026-11-18 02:09:12 | INFO     | farmers_prepare | acled_daily:77 | ACLED India 2020-11-01..2021-11-21: 19679 events, 5257 farmer-related (507 violent, 186 riots)
+2026-11-18 02:09:12 | INFO     | farmers_prepare | timed_step:92 | DONE   daily aggregate (2.0s)
+2026-11-18 02:09:12 | INFO     | farmers_prepare | main:147 | tweets=1084452 days=386..2021-11-21 | wrote /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_processed
+2026-11-18 02:09:12 | INFO     | farmers_prepare | main:148 | === FARMERS PREPARE finished successfully ===

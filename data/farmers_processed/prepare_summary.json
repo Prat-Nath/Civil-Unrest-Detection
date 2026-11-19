@@ -1,0 +1,18 @@
+{
+  "run_id": "20261118_020745",
+  "tweets": 1084452,
+  "date_min": "2020-11-01",
+  "date_max": "2021-11-21",
+  "days": 386,
+  "days_with_tweets": 386,
+  "acled_events_farmer": 5257,
+  "acled_events_all": 19679,
+  "keyword_groups": {
+    "violence": "violen|lathi|tear ?gas|clash|brutal|attack|beaten|beat up|killed|murder|died|dead|death|martyr|injur|shot|firing|water ?cannon|barricade|stone|pelt",
+    "police": "police|cops?\\b|crpf|paramilitary|detain|arrest|jail|tihar",
+    "event_words": "chakka ?jaam|bharat ?bandh|rail ?roko|tractor ?(rally|parade|march)|red ?fort|republic day|mahapanchayat|kisan (parade|mahapanchayat)",
+    "govt": "modi|bjp|government|govt|farm ?laws?|msp|amit shah|tomar|parliament",
+    "intl": "rihanna|greta|thunberg|meena harris|canada|trudeau|un\\b|uk parliament",
+    "anti": "khalistan|anti.?national|terror|urban naxal|paid|fake farmers?|andolanjeevi"
+  }
+}

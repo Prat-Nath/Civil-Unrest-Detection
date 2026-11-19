@@ -1,0 +1,69 @@
+2026-11-17 01:56:28 | INFO     | train_baseline | main:61 | === TRAIN BASELINE run_name=tfidf_lr_binary_20261117_015628 ===
+2026-11-17 01:56:28 | INFO     | train_baseline | main:62 | Log file: E:\ai\NLP\logs\train_baseline\train_baseline_tfidf_lr_binary_20261117_015628.log
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:74 | Package       : numpy 2.3.5
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:74 | Package       : pandas 2.3.3
+2026-11-17 01:56:28 | INFO     | train_baseline | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-17 01:56:30 | INFO     | train_baseline | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : C = 4.0
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : data_dir = E:\ai\NLP\data\processed
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : log_dir = None
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : mask_cues = False
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : max_eval_samples = None
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : max_features = 200000
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : max_train_samples = None
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : models_dir = E:\ai\NLP\models
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : ngram_max = 2
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : results_dir = E:\ai\NLP\results
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : seed = 42
+2026-11-17 01:56:31 | INFO     | train_baseline | log_environment:79 | Arg           : task = binary
+2026-11-17 01:56:31 | INFO     | train_baseline | timed_step:85 | START  load data
+2026-11-17 01:56:32 | INFO     | train_baseline | main:72 | Rows: train=104340 val=22383 test=22287 | task=binary label_col=is_violent mask_cues=False
+2026-11-17 01:56:32 | INFO     | train_baseline | main:75 | Label counts train: {0: 89111, 1: 15229}
+2026-11-17 01:56:32 | INFO     | train_baseline | main:75 | Label counts val  : {0: 19891, 1: 2492}
+2026-11-17 01:56:32 | INFO     | train_baseline | main:75 | Label counts test : {0: 19917, 1: 2370}
+2026-11-17 01:56:32 | INFO     | train_baseline | timed_step:92 | DONE   load data (0.8s)
+2026-11-17 01:56:32 | INFO     | train_baseline | timed_step:85 | START  fit TF-IDF
+2026-11-17 01:56:42 | INFO     | train_baseline | main:84 | TF-IDF matrix: train=(104340, 124186) vocab=124186
+2026-11-17 01:56:42 | INFO     | train_baseline | timed_step:92 | DONE   fit TF-IDF (10.1s)
+2026-11-17 01:56:42 | INFO     | train_baseline | timed_step:85 | START  fit logistic regression
+2026-11-17 01:56:43 | INFO     | train_baseline | timed_step:92 | DONE   fit logistic regression (0.9s)
+2026-11-17 01:56:43 | INFO     | train_baseline | timed_step:85 | START  evaluate
+2026-11-17 01:56:43 | INFO     | train_baseline | main:95 | 
+--- VALIDATION (default decision rule) (n=22383) ---
+accuracy=0.9933  macro_f1=0.9834  weighted_f1=0.9934
+PR-AUC(violent)=0.9956  ROC-AUC(violent)=0.9995
+threshold=0.500
+  non_violent  P=0.999  R=0.994  F1=0.996  support=19891
+  violent      P=0.954  R=0.988  F1=0.971  support=2492
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19771, 120], [29, 2463]]
+2026-11-17 01:56:43 | INFO     | train_baseline | main:96 | 
+--- TEST (default decision rule) (n=22287) ---
+accuracy=0.9940  macro_f1=0.9844  weighted_f1=0.9940
+PR-AUC(violent)=0.9958  ROC-AUC(violent)=0.9995
+threshold=0.500
+  non_violent  P=0.998  R=0.995  F1=0.997  support=19917
+  violent      P=0.960  R=0.984  F1=0.972  support=2370
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19821, 96], [38, 2332]]
+2026-11-17 01:56:43 | INFO     | train_baseline | main:100 | Threshold tuned on validation: 0.573
+2026-11-17 01:56:43 | INFO     | train_baseline | main:101 | 
+--- TEST at validation-tuned threshold (n=22287) ---
+accuracy=0.9942  macro_f1=0.9847  weighted_f1=0.9942
+PR-AUC(violent)=0.9958  ROC-AUC(violent)=0.9995
+threshold=0.573
+  non_violent  P=0.997  R=0.996  F1=0.997  support=19917
+  violent      P=0.967  R=0.979  F1=0.973  support=2370
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19837, 80], [50, 2320]]
+2026-11-17 01:56:43 | INFO     | train_baseline | main:106 | Top words for 'violent': ['clashed', 'assaulted', 'attacked', 'vandalized', 'tyres', 'clashed with', 'rioters', 'vandalised', 'tires', 'stones', 'mob', 'broke', 'damaged', 'beat', 'during demonstration', 'demonstrators', 'demonstration and', 'burnt tyres', 'violent', 'set', 'clash', 'barricades', 'burning', 'clashes', 'stones at']
+2026-11-17 01:56:43 | INFO     | train_baseline | main:107 | Top words against 'violent': ['protest', 'staged', 'staged protest', 'protested', 'protest in', 'protests', 'protesters', 'held protest', 'held', 'protest at', 'protesting', 'demanding', 'against', 'protested at', 'demanded', 'staged protests', 'the protesters', 'dharna', 'to protest', 'protest and', 'protesting against', 'demand', 'protested in', 'protest march', 'blocked']
+2026-11-17 01:56:43 | INFO     | train_baseline | timed_step:92 | DONE   evaluate (0.3s)
+2026-11-17 01:56:43 | INFO     | train_baseline | timed_step:85 | START  save model + results
+2026-11-17 01:56:46 | INFO     | train_baseline | main:124 | Model   -> E:\ai\NLP\models\tfidf_lr_binary_20261117_015628
+2026-11-17 01:56:46 | INFO     | train_baseline | main:125 | Results -> E:\ai\NLP\results\tfidf_lr_binary_20261117_015628
+2026-11-17 01:56:46 | INFO     | train_baseline | timed_step:92 | DONE   save model + results (2.3s)
+2026-11-17 01:56:46 | INFO     | train_baseline | main:126 | === TRAIN BASELINE finished successfully ===

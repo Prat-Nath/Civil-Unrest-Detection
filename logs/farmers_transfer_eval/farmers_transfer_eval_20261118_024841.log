@@ -1,0 +1,15 @@
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 02:48:41 | INFO     | farmers_transfer_eval | log_environment:76 | Package       : torch not installed
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : labels = data/farmers_labels/gold_claude.csv
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : log_dir = None
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : run = results/farmers_transfer_20261118_021926
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | log_environment:79 | Arg           : threshold = 0.5
+2026-11-18 02:48:42 | INFO     | farmers_transfer_eval | main:64 | hand-label evaluation: {'labelled': 293, 'positives_labelled': 50, 'threshold': 0.5, 'precision_weighted': 0.373, 'recall_weighted': 0.089, 'f1_weighted': 0.144, 'unweighted_precision': 0.373, 'estimated_violent_share_of_tweets': 0.0662}

@@ -1,0 +1,21 @@
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 08:52:58 | INFO     | predict_unrest | log_environment:76 | Package       : torch not installed
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : date_col = date
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : file = data/examples/new_posts_example.csv
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : interactive = False
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : log_dir = None
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : max_length = 64
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : model = tfidf
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : text = []
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : text_col = text
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : threshold = None
+2026-11-18 08:52:59 | INFO     | predict_unrest | log_environment:79 | Arg           : transformer_dir = None
+2026-11-18 08:53:04 | INFO     | predict_unrest | tfidf_fit_predict:82 | top tf-idf terms: ['violence', 'goons', 'killed', 'riots', 'violent', 'police', 'brutality', 'attacked', 'modimurderingfarmers', 'murder', 'rape', 'attacking', 'patriotism', 'bjpgoonsattackingfarmers', 'brutal', 'beating', 'beaten', 'patriotic', 'patriots', 'delhiriots', 'patriot', 'bjpkilleddemocracy', 'murderer', 'injured', 'attack on']

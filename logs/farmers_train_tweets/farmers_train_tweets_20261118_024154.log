@@ -1,0 +1,39 @@
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:76 | Package       : torch not installed
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : base_model = distilroberta-base
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : batch_size = 32
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : cue_dropout = 0.5
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : epochs = 2
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : labels_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_labels
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : log_dir = None
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : lr = 2e-05
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_eval = 0
+2026-11-18 02:41:54 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_length = 64
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : max_train = 0
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : model = tfidf
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : per_day = 300
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : score_daily = True
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | log_environment:79 | Arg           : seed = 42
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | main:181 | === FARMERS TRAIN TWEETS started (run 20261118_024154) ===
+2026-11-18 02:41:55 | INFO     | farmers_train_tweets | timed_step:85 | START  load data
+2026-11-18 02:41:56 | INFO     | farmers_train_tweets | main:199 | train 49946 (33.8% violent) | val 17888 | test 12287 | gold 293 (50 violent by Claude's labels)
+2026-11-18 02:41:56 | INFO     | farmers_train_tweets | timed_step:92 | DONE   load data (1.2s)
+2026-11-18 02:41:56 | INFO     | farmers_train_tweets | main:207 | rule baseline on gold: {'precision': 0.9384, 'recall': 0.8424, 'f1': 0.8878, 'pr_auc': 0.8009, 'roc_auc': 0.9192, 'prevalence_est': 0.0658, 'threshold': 0.5, 'n_gold': 293, 'ci95': {'precision': [0.848, 0.97], 'recall': [0.549, 0.996], 'f1': [0.676, 0.978]}}
+2026-11-18 02:41:56 | INFO     | farmers_train_tweets | timed_step:85 | START  train + evaluate tfidf
+2026-11-18 02:41:59 | INFO     | farmers_train_tweets | tfidf_fit_predict:82 | top tf-idf terms: ['violence', 'goons', 'killed', 'riots', 'violent', 'police', 'brutality', 'attacked', 'modimurderingfarmers', 'murder', 'rape', 'attacking', 'patriotism', 'bjpgoonsattackingfarmers', 'brutal', 'beating', 'beaten', 'patriotic', 'patriots', 'delhiriots', 'patriot', 'bjpkilleddemocracy', 'murderer', 'injured', 'attack on']
+2026-11-18 02:42:00 | INFO     | farmers_train_tweets | main:228 | tfidf | silver test F1 0.787 | GOLD weighted P 0.671 R 0.848 F1 0.749 (CI [0.458, 0.934]) PR-AUC 0.886
+2026-11-18 02:42:00 | INFO     | farmers_train_tweets | timed_step:85 | START  score daily sample (tfidf)
+2026-11-18 02:42:07 | INFO     | farmers_train_tweets | score_daily:172 | scoring 109081 tweets (<= 300 per day, 386 days)
+2026-11-18 02:42:10 | INFO     | farmers_train_tweets | main:245 | daily signals: 386 days -> daily_signals_tfidf.csv
+2026-11-18 02:42:10 | INFO     | farmers_train_tweets | timed_step:92 | DONE   score daily sample (tfidf) (9.8s)
+2026-11-18 02:42:10 | INFO     | farmers_train_tweets | timed_step:92 | DONE   train + evaluate tfidf (14.2s)
+2026-11-18 02:42:10 | INFO     | farmers_train_tweets | main:247 | Wrote /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/results/farmers_tweets_20261118_024154
+2026-11-18 02:42:10 | INFO     | farmers_train_tweets | main:248 | === FARMERS TRAIN TWEETS finished successfully ===

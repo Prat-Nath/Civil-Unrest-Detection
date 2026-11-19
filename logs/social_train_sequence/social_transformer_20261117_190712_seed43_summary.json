@@ -1,0 +1,15 @@
+{
+  "run_name": "social_transformer_20261117_190712_seed43",
+  "best_val_mean_pr_auc": 0.1701330918534019,
+  "epochs_run": 7,
+  "test_f1": {
+    "seq_transformer_h1": 0.15165876777251186,
+    "seq_transformer_h3": 0.23034055727554179,
+    "seq_transformer_h7": 0.3594494441503441
+  },
+  "test_pr_auc": {
+    "seq_transformer_h1": 0.08552181112421098,
+    "seq_transformer_h3": 0.15316996530346136,
+    "seq_transformer_h7": 0.2514199535749737
+  }
+}

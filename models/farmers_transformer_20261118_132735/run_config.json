@@ -1,0 +1,44 @@
+{
+  "model_type": "transformer",
+  "base_model": "distilroberta-base",
+  "task": "binary",
+  "mask_cues": false,
+  "cue_dropout": 0.5,
+  "max_length": 64,
+  "label_names": [
+    "non_violent",
+    "violent"
+  ],
+  "threshold": 0.1212516372563196,
+  "best_epoch": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1436,
+      "val_f1": 0.9499,
+      "val_threshold": 0.1213
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.0495,
+      "val_f1": 0.9401,
+      "val_threshold": 0.0708
+    }
+  ],
+  "args": {
+    "model": "transformer",
+    "base_model": "distilroberta-base",
+    "labels_dir": "E:\\ai\\NLP\\data\\farmers_labels",
+    "max_train": "0",
+    "max_eval": "0",
+    "epochs": "2",
+    "batch_size": "32",
+    "max_length": "64",
+    "lr": "2e-05",
+    "cue_dropout": "0.5",
+    "score_daily": "True",
+    "per_day": "300",
+    "seed": "42",
+    "log_dir": "None"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "run_id": "20261118_132019",
+  "note": "silver = agreement with weak rules; gold = Claude-labelled sample, stratum-weighted, 95% bootstrap intervals",
+  "rule_baseline_gold": {
+    "precision": 0.9384,
+    "recall": 0.8379,
+    "f1": 0.8853,
+    "pr_auc": 0.797,
+    "roc_auc": 0.917,
+    "prevalence_est": 0.0661,
+    "threshold": 0.5,
+    "n_gold": 293,
+    "ci95": {
+      "precision": [
+        0.848,
+        0.97
+      ],
+      "recall": [
+        0.544,
+        0.993
+      ],
+      "f1": [
+        0.673,
+        0.977
+      ]
+    }
+  },
+  "transformer": {
+    "threshold_from_silver_val": 0.3575,
+    "silver_val": {
+      "precision": 0.5307,
+      "recall": 0.6985,
+      "f1": 0.6032,
+      "pr_auc": 0.6749,
+      "roc_auc": 0.8125,
+      "n": 1000,
+      "positive_rate": 0.272,
+      "threshold": 0.3575
+    },
+    "silver_test": {
+      "precision": 0.6054,
+      "recall": 0.7784,
+      "f1": 0.6811,
+      "pr_auc": 0.7822,
+      "roc_auc": 0.8399,
+      "n": 1000,
+      "positive_rate": 0.343,
+      "threshold": 0.3575
+    },
+    "gold": {
+      "precision": 0.191,
+      "recall": 0.8405,
+      "f1": 0.3113,
+      "pr_auc": 0.6422,
+      "roc_auc": 0.8667,
+      "prevalence_est": 0.0661,
+      "threshold": 0.3575,
+      "n_gold": 293,
+      "ci95": {
+        "precision": [
+          0.069,
+          0.337
+        ],
+        "recall": [
+          0.545,
+          0.995
+        ],
+        "f1": [
+          0.126,
+          0.495
+        ]
+      }
+    },
+    "gold_at_0.5": {
+      "precision": 0.3053,
+      "recall": 0.835,
+      "f1": 0.4471,
+      "pr_auc": 0.6422,
+      "roc_auc": 0.8667,
+      "prevalence_est": 0.0661,
+      "threshold": 0.5,
+      "n_gold": 293
+    },
+    "gold_unweighted_precision_recall_f1": {
+      "precision": 0.3217,
+      "recall": 0.8846,
+      "f1": 0.4718
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5558,
+        "val_f1": 0.6032,
+        "val_threshold": 0.3575
+      }
+    ]
+  }
+}

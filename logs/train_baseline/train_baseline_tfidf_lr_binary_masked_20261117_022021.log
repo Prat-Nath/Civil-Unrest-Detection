@@ -1,0 +1,70 @@
+2026-11-17 02:20:21 | INFO     | train_baseline | main:61 | === TRAIN BASELINE run_name=tfidf_lr_binary_masked_20261117_022021 ===
+2026-11-17 02:20:21 | INFO     | train_baseline | main:62 | Log file: E:\ai\NLP\logs\train_baseline\train_baseline_tfidf_lr_binary_masked_20261117_022021.log
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:74 | Package       : numpy 2.3.5
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:74 | Package       : pandas 2.3.3
+2026-11-17 02:20:21 | INFO     | train_baseline | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-17 02:20:23 | INFO     | train_baseline | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : C = 4.0
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : data_dir = E:\ai\NLP\data\processed
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : log_dir = None
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : mask_cues = True
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : max_eval_samples = None
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : max_features = 200000
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : max_train_samples = None
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : models_dir = E:\ai\NLP\models
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : ngram_max = 2
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : results_dir = E:\ai\NLP\results
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : seed = 42
+2026-11-17 02:20:25 | INFO     | train_baseline | log_environment:79 | Arg           : task = binary
+2026-11-17 02:20:25 | INFO     | train_baseline | timed_step:85 | START  load data
+2026-11-17 02:20:36 | INFO     | train_baseline | main:72 | Rows: train=104340 val=22383 test=22287 | task=binary label_col=is_violent mask_cues=True
+2026-11-17 02:20:36 | INFO     | train_baseline | main:75 | Label counts train: {0: 89111, 1: 15229}
+2026-11-17 02:20:36 | INFO     | train_baseline | main:75 | Label counts val  : {0: 19891, 1: 2492}
+2026-11-17 02:20:36 | INFO     | train_baseline | main:75 | Label counts test : {0: 19917, 1: 2370}
+2026-11-17 02:20:36 | INFO     | train_baseline | main:77 | Example masked text: On 1 January 2018, two groups of TMC members MASKED at Cooch Behar town (WB) over an unreported issue. Five persons were left MASKED in the MASKED.
+2026-11-17 02:20:36 | INFO     | train_baseline | timed_step:92 | DONE   load data (11.4s)
+2026-11-17 02:20:36 | INFO     | train_baseline | timed_step:85 | START  fit TF-IDF
+2026-11-17 02:20:45 | INFO     | train_baseline | main:84 | TF-IDF matrix: train=(104340, 123069) vocab=123069
+2026-11-17 02:20:45 | INFO     | train_baseline | timed_step:92 | DONE   fit TF-IDF (8.9s)
+2026-11-17 02:20:45 | INFO     | train_baseline | timed_step:85 | START  fit logistic regression
+2026-11-17 02:20:46 | INFO     | train_baseline | timed_step:92 | DONE   fit logistic regression (0.5s)
+2026-11-17 02:20:46 | INFO     | train_baseline | timed_step:85 | START  evaluate
+2026-11-17 02:20:46 | INFO     | train_baseline | main:95 | 
+--- VALIDATION (default decision rule) (n=22383) ---
+accuracy=0.9920  macro_f1=0.9803  weighted_f1=0.9921
+PR-AUC(violent)=0.9934  ROC-AUC(violent)=0.9993
+threshold=0.500
+  non_violent  P=0.999  R=0.992  F1=0.995  support=19891
+  violent      P=0.941  R=0.991  F1=0.965  support=2492
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19735, 156], [23, 2469]]
+2026-11-17 02:20:46 | INFO     | train_baseline | main:96 | 
+--- TEST (default decision rule) (n=22287) ---
+accuracy=0.9922  macro_f1=0.9798  weighted_f1=0.9923
+PR-AUC(violent)=0.9938  ROC-AUC(violent)=0.9992
+threshold=0.500
+  non_violent  P=0.998  R=0.993  F1=0.996  support=19917
+  violent      P=0.946  R=0.983  F1=0.964  support=2370
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19783, 134], [40, 2330]]
+2026-11-17 02:20:46 | INFO     | train_baseline | main:100 | Threshold tuned on validation: 0.634
+2026-11-17 02:20:46 | INFO     | train_baseline | main:101 | 
+--- TEST at validation-tuned threshold (n=22287) ---
+accuracy=0.9933  macro_f1=0.9825  weighted_f1=0.9933
+PR-AUC(violent)=0.9938  ROC-AUC(violent)=0.9992
+threshold=0.634
+  non_violent  P=0.997  R=0.996  F1=0.996  support=19917
+  violent      P=0.965  R=0.973  F1=0.969  support=2370
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19833, 84], [65, 2305]]
+2026-11-17 02:20:46 | INFO     | train_baseline | main:106 | Top words for 'violent': ['masked', 'assaulted', 'tyres', 'masked with', 'tires', 'mob', 'broke', 'damaged', 'and masked', 'demonstration', 'during demonstration', 'masked masked', 'burnt tyres', 'with', 'masked at', 'demonstration and', 'masked the', 'burning', 'barricades', 'demonstrators', 'burnt', 'threw', 'and', 'burned', 'demonstrating']
+2026-11-17 02:20:46 | INFO     | train_baseline | main:107 | Top words against 'violent': ['protest', 'staged', 'staged protest', 'protest in', 'protested', 'held protest', 'protest at', 'held', 'protests', 'protesters', 'against', 'demanding', 'protesting', 'protested at', 'demanded', 'masked on', 'protest and', 'staged protests', 'against the', 'the protesters', 'sit', 'sit in', 'protest march', 'protest against', 'demand']
+2026-11-17 02:20:46 | INFO     | train_baseline | timed_step:92 | DONE   evaluate (0.2s)
+2026-11-17 02:20:46 | INFO     | train_baseline | timed_step:85 | START  save model + results
+2026-11-17 02:20:48 | INFO     | train_baseline | main:124 | Model   -> E:\ai\NLP\models\tfidf_lr_binary_masked_20261117_022021
+2026-11-17 02:20:48 | INFO     | train_baseline | main:125 | Results -> E:\ai\NLP\results\tfidf_lr_binary_masked_20261117_022021
+2026-11-17 02:20:48 | INFO     | train_baseline | timed_step:92 | DONE   save model + results (1.9s)
+2026-11-17 02:20:48 | INFO     | train_baseline | main:126 | === TRAIN BASELINE finished successfully ===

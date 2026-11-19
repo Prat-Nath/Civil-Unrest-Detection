@@ -1,0 +1,77 @@
+2026-11-17 02:49:55 | INFO     | evaluate | main:107 | === EVALUATE run_name=distilroberta-base_binary_20261117_015913 split=test ===
+2026-11-17 02:49:55 | INFO     | evaluate | main:108 | Log file: E:\ai\NLP\logs\evaluate\evaluate_distilroberta-base_binary_20261117_015913_test_20261117_024955.log
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:74 | Package       : numpy 2.3.5
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:74 | Package       : pandas 2.3.3
+2026-11-17 02:49:55 | INFO     | evaluate | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-17 02:49:58 | INFO     | evaluate | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : batch_size = 64
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : data_dir = E:\ai\NLP\data\processed
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : log_dir = None
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : max_samples = None
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : model_dir = models\distilroberta-base_binary_20261117_015913
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : results_dir = E:\ai\NLP\results
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : seed = 42
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : split = test
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : threshold = None
+2026-11-17 02:50:00 | INFO     | evaluate | log_environment:79 | Arg           : tune_threshold = True
+2026-11-17 02:50:00 | INFO     | evaluate | main:110 | Model config: {'model_type': 'transformer', 'run_name': 'distilroberta-base_binary_20261117_015913', 'base_model': 'distilroberta-base', 'task': 'binary', 'mask_cues': False, 'max_length': 128, 'label_names': ['non_violent', 'violent'], 'threshold': 0.8175744414329529, 'best_epoch': 3, 'best_val_primary': 0.9856402074192262, '_model_dir': 'E:\\ai\\NLP\\models\\distilroberta-base_binary_20261117_015913'}
+2026-11-17 02:50:00 | INFO     | evaluate | timed_step:85 | START  load data + predict
+2026-11-17 02:50:02 | INFO     | evaluate | predict_probs:51 | Loading transformer from E:\ai\NLP\models\distilroberta-base_binary_20261117_015913\best on cuda
+2026-11-17 02:50:49 | INFO     | evaluate | main:121 | Predicted 22287 rows
+2026-11-17 02:50:49 | INFO     | evaluate | timed_step:92 | DONE   load data + predict (49.6s)
+2026-11-17 02:50:49 | INFO     | evaluate | timed_step:85 | START  tune threshold on val
+2026-11-17 02:50:49 | INFO     | evaluate | predict_probs:51 | Loading transformer from E:\ai\NLP\models\distilroberta-base_binary_20261117_015913\best on cuda
+2026-11-17 02:51:36 | INFO     | evaluate | main:132 | Tuned threshold on validation: 0.818
+2026-11-17 02:51:36 | INFO     | evaluate | timed_step:92 | DONE   tune threshold on val (46.2s)
+2026-11-17 02:51:36 | INFO     | evaluate | main:133 | Decision threshold used: 0.8179141879081726
+2026-11-17 02:51:36 | INFO     | evaluate | timed_step:85 | START  metrics + breakdowns
+2026-11-17 02:51:36 | INFO     | evaluate | main:137 | 
+--- TEST - distilroberta-base_binary_20261117_015913 (n=22287) ---
+accuracy=0.9970  macro_f1=0.9921  weighted_f1=0.9970
+PR-AUC(violent)=0.9972  ROC-AUC(violent)=0.9996
+threshold=0.818
+  non_violent  P=0.999  R=0.998  F1=0.998  support=19917
+  violent      P=0.983  R=0.989  F1=0.986  support=2370
+confusion matrix (rows=true, cols=pred; order=['non_violent', 'violent']): [[19877, 40], [27, 2343]]
+2026-11-17 02:51:36 | INFO     | evaluate | main:155 | Breakdown by year:
+ year     n  violent_rate  precision  recall    f1
+ 2025 18407         0.107      0.985   0.989 0.987
+ 2024  3880         0.102      0.975   0.985 0.980
+2026-11-17 02:51:36 | INFO     | evaluate | main:156 | Breakdown by state (top 20 by size):
+           admin1    n  violent_rate  precision  recall    f1
+    Uttar Pradesh 2022         0.243      0.998   0.998 0.998
+            Assam 1865         0.098      0.995   0.995 0.995
+Jammu and Kashmir 1665         0.034      1.000   0.982 0.991
+       Tamil Nadu 1639         0.023      1.000   1.000 1.000
+           Punjab 1603         0.075      1.000   1.000 1.000
+        Telangana 1580         0.035      0.932   0.982 0.957
+        Karnataka 1387         0.048      1.000   0.970 0.985
+          Manipur 1066         0.082      0.942   0.931 0.936
+      West Bengal  930         0.295      0.989   0.985 0.987
+   Andhra Pradesh  812         0.038      1.000   1.000 1.000
+   Madhya Pradesh  809         0.140      0.966   0.991 0.978
+      Maharashtra  797         0.142      0.949   0.991 0.970
+           Kerala  792         0.064      0.980   0.941 0.960
+          Tripura  600         0.163      1.000   1.000 1.000
+          Haryana  589         0.124      1.000   1.000 1.000
+           Odisha  513         0.199      0.936   1.000 0.967
+            Delhi  478         0.088      0.952   0.952 0.952
+        Jharkhand  415         0.137      0.983   1.000 0.991
+        Rajasthan  410         0.156      0.969   0.969 0.969
+ Himachal Pradesh  367         0.030      1.000   1.000 1.000
+2026-11-17 02:51:36 | INFO     | evaluate | main:162 | Saved 40 false-positive and 27 false-negative examples for error analysis
+2026-11-17 02:51:36 | INFO     | evaluate | main:164 | Missed violent example: On 19 November 2024, a large number of people staged a demonstration rally organized by All Manipur United Clubs' Organisation (AMUCO), All Manipur Women's Voluntary Association (AMAWOVA), Manipuri Students' Federation (
+2026-11-17 02:51:36 | INFO     | evaluate | main:164 | Missed violent example: On 19 December 2024, MPs from the INDIA alliance (an alliance of opposition parties), including INC, staged a demonstration, raising slogans, at the parliament premises in the Delhi - Parliament Street area (New Delhi, D
+2026-11-17 02:51:36 | INFO     | evaluate | main:164 | Missed violent example: On 8 June 2025, locals from various localities including members of All Yairipok Meira Paibi Lup staged a demonstration on the first day of the 10 day total shutdown called by Arambai Tenggol across Manipur at Yairipok p
+2026-11-17 02:51:36 | INFO     | evaluate | main:166 | False alarm example   : On 20 May 2025, members of INC, led by the Pradesh Congress committee president and local MLAs, held a demonstration and clashed with police in Mandsaur town (Madhya Pradesh) against the unilateral action of local police
+2026-11-17 02:51:36 | INFO     | evaluate | main:166 | False alarm example   : On 3 August 2025, a group of Bhil leaders took out a demonstration rally in the Khandia area in Jhalawar city (Jhalawar, Rajasthan) during which some rioters clashed with the demonstrators demanding that the Banswara MP 
+2026-11-17 02:51:36 | INFO     | evaluate | main:166 | False alarm example   : On 25 September 2025, villagers tried to vandalize a roadways bus, blocked the Alwar-Sikandra mega highway, and held a five-hour-long demonstration in the Baswa area (Dausa, Rajasthan), after the murder of a woman over a
+2026-11-17 02:51:37 | INFO     | evaluate | main:185 | Results -> E:\ai\NLP\results\distilroberta-base_binary_20261117_015913\eval_test
+2026-11-17 02:51:37 | INFO     | evaluate | timed_step:92 | DONE   metrics + breakdowns (1.2s)
+2026-11-17 02:51:37 | INFO     | evaluate | main:186 | === EVALUATE finished successfully ===

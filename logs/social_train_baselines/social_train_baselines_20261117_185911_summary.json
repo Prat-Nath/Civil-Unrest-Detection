@@ -1,0 +1,32 @@
+{
+  "run_id": "20261117_185911",
+  "results_dir": "/home/claude/NLP/results/social_baselines_20261117_185911",
+  "test_f1": {
+    "prevalence_h1": 0.0,
+    "recent_rule_h1": 0.05907733156322602,
+    "logistic_h1": 0.13921113689095127,
+    "grad_boost_h1": 0.14249363867684478,
+    "prevalence_h3": 0.0,
+    "recent_rule_h3": 0.14902705268153774,
+    "logistic_h3": 0.20202020202020202,
+    "grad_boost_h3": 0.22706863373957664,
+    "prevalence_h7": 0.0,
+    "recent_rule_h7": 0.28081246302504437,
+    "logistic_h7": 0.33832250776616773,
+    "grad_boost_h7": 0.3536723163841808
+  },
+  "test_pr_auc": {
+    "prevalence_h1": 0.02445997458703939,
+    "recent_rule_h1": 0.03287310362079421,
+    "logistic_h1": 0.09166140005539987,
+    "grad_boost_h1": 0.09145496552698947,
+    "prevalence_h3": 0.06841596909207985,
+    "recent_rule_h3": 0.08195809592555953,
+    "logistic_h3": 0.166578474999828,
+    "grad_boost_h3": 0.15837429155482274,
+    "prevalence_h7": 0.14571617598412173,
+    "recent_rule_h7": 0.15400118159329113,
+    "logistic_h7": 0.25154506159348095,
+    "grad_boost_h7": 0.2809403964690988
+  }
+}

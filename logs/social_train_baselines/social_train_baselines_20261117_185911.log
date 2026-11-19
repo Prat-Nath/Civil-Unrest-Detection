@@ -1,0 +1,52 @@
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:66 | Python        : 3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:67 | Platform      : Linux-6.18.44-fc-v553-x86_64-with-glibc2.39
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:68 | Executable    : /usr/local/bin/python3
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:69 | Working dir   : /home/claude/NLP
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:70 | Project root  : /home/claude/NLP
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:74 | Package       : numpy 2.5.3
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:74 | Package       : pandas 3.0.5
+2026-11-17 18:59:11 | INFO     | social_train_baselines | log_environment:74 | Package       : sklearn 1.9.1
+2026-11-17 18:59:12 | INFO     | social_train_baselines | log_environment:74 | Package       : torch 2.15.0+cu132
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:74 | Package       : transformers 5.23.0
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:79 | Arg           : horizons = [1, 3, 7]
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:79 | Arg           : log_dir = None
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:79 | Arg           : panel = /home/claude/NLP/data/social_processed/panel.csv.gz
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:79 | Arg           : results_dir = /home/claude/NLP/results
+2026-11-17 18:59:13 | INFO     | social_train_baselines | log_environment:79 | Arg           : seed = 42
+2026-11-17 18:59:13 | INFO     | social_train_baselines | main:66 | === SOCIAL TRAIN BASELINES started (run 20261117_185911) | log file: /home/claude/NLP/logs/social_train_baselines/social_train_baselines_20261117_185911.log ===
+2026-11-17 18:59:13 | INFO     | social_train_baselines | main:73 | eligible rows: 39,342 | splits: {'train': 26626, 'val': 6378, 'test': 6338}
+2026-11-17 18:59:13 | INFO     | social_train_baselines | main:81 | --- horizon h=1 days ahead | rows train/val/test = 26584/6378/6296 | positive rate 0.029/0.024/0.024
+2026-11-17 18:59:13 | INFO     | social_train_baselines | timed_step:85 | START  fit logistic (h=1)
+2026-11-17 18:59:13 | INFO     | social_train_baselines | timed_step:92 | DONE   fit logistic (h=1) (0.2s)
+2026-11-17 18:59:13 | INFO     | social_train_baselines | timed_step:85 | START  fit grad_boost (h=1)
+2026-11-17 18:59:17 | INFO     | social_train_baselines | timed_step:92 | DONE   fit grad_boost (h=1) (3.3s)
+2026-11-17 18:59:17 | INFO     | social_train_baselines | timed_step:85 | START  permutation importance on validation (h=1)
+2026-11-17 18:59:22 | INFO     | social_train_baselines | timed_step:92 | DONE   permutation importance on validation (h=1) (4.7s)
+2026-11-17 18:59:22 | INFO     | social_train_baselines | main:112 | TEST prevalence  h=1 | n=6296 pos=154 (2.4%) | P=0.000 R=0.000 F1=0.000 | PR-AUC=0.024 (x1.0 over base) ROC-AUC=0.500 | thr=0.500 | CM=[[6142, 0], [154, 0]]
+2026-11-17 18:59:22 | INFO     | social_train_baselines | main:112 | TEST recent_rule h=1 | n=6296 pos=154 (2.4%) | P=0.031 R=0.578 F1=0.059 | PR-AUC=0.033 (x1.3 over base) ROC-AUC=0.599 | thr=1.006 | CM=[[3372, 2770], [65, 89]]
+2026-11-17 18:59:22 | INFO     | social_train_baselines | main:112 | TEST logistic    h=1 | n=6296 pos=154 (2.4%) | P=0.085 R=0.390 F1=0.139 | PR-AUC=0.092 (x3.7 over base) ROC-AUC=0.778 | thr=0.668 | CM=[[5494, 648], [94, 60]]
+2026-11-17 18:59:22 | INFO     | social_train_baselines | main:112 | TEST grad_boost  h=1 | n=6296 pos=154 (2.4%) | P=0.117 R=0.182 F1=0.142 | PR-AUC=0.091 (x3.7 over base) ROC-AUC=0.766 | thr=0.760 | CM=[[5931, 211], [126, 28]]
+2026-11-17 18:59:22 | INFO     | social_train_baselines | main:81 | --- horizon h=3 days ahead | rows train/val/test = 26501/6378/6212 | positive rate 0.081/0.066/0.068
+2026-11-17 18:59:22 | INFO     | social_train_baselines | timed_step:85 | START  fit logistic (h=3)
+2026-11-17 18:59:22 | INFO     | social_train_baselines | timed_step:92 | DONE   fit logistic (h=3) (0.1s)
+2026-11-17 18:59:22 | INFO     | social_train_baselines | timed_step:85 | START  fit grad_boost (h=3)
+2026-11-17 18:59:25 | INFO     | social_train_baselines | timed_step:92 | DONE   fit grad_boost (h=3) (3.3s)
+2026-11-17 18:59:25 | INFO     | social_train_baselines | timed_step:85 | START  permutation importance on validation (h=3)
+2026-11-17 18:59:30 | INFO     | social_train_baselines | timed_step:92 | DONE   permutation importance on validation (h=3) (4.5s)
+2026-11-17 18:59:30 | INFO     | social_train_baselines | main:112 | TEST prevalence  h=3 | n=6212 pos=425 (6.8%) | P=0.000 R=0.000 F1=0.000 | PR-AUC=0.068 (x1.0 over base) ROC-AUC=0.500 | thr=0.500 | CM=[[5787, 0], [425, 0]]
+2026-11-17 18:59:30 | INFO     | social_train_baselines | main:112 | TEST recent_rule h=3 | n=6212 pos=425 (6.8%) | P=0.083 R=0.739 F1=0.149 | PR-AUC=0.082 (x1.2 over base) ROC-AUC=0.570 | thr=0.906 | CM=[[2312, 3475], [111, 314]]
+2026-11-17 18:59:30 | INFO     | social_train_baselines | main:112 | TEST logistic    h=3 | n=6212 pos=425 (6.8%) | P=0.138 R=0.376 F1=0.202 | PR-AUC=0.167 (x2.4 over base) ROC-AUC=0.725 | thr=0.599 | CM=[[4788, 999], [265, 160]]
+2026-11-17 18:59:30 | INFO     | social_train_baselines | main:112 | TEST grad_boost  h=3 | n=6212 pos=425 (6.8%) | P=0.156 R=0.416 F1=0.227 | PR-AUC=0.158 (x2.3 over base) ROC-AUC=0.730 | thr=0.600 | CM=[[4830, 957], [248, 177]]
+2026-11-17 18:59:30 | INFO     | social_train_baselines | main:81 | --- horizon h=7 days ahead | rows train/val/test = 26336/6378/6046 | positive rate 0.170/0.145/0.146
+2026-11-17 18:59:30 | INFO     | social_train_baselines | timed_step:85 | START  fit logistic (h=7)
+2026-11-17 18:59:30 | INFO     | social_train_baselines | timed_step:92 | DONE   fit logistic (h=7) (0.2s)
+2026-11-17 18:59:30 | INFO     | social_train_baselines | timed_step:85 | START  fit grad_boost (h=7)
+2026-11-17 18:59:33 | INFO     | social_train_baselines | timed_step:92 | DONE   fit grad_boost (h=7) (3.2s)
+2026-11-17 18:59:33 | INFO     | social_train_baselines | timed_step:85 | START  permutation importance on validation (h=7)
+2026-11-17 18:59:38 | INFO     | social_train_baselines | timed_step:92 | DONE   permutation importance on validation (h=7) (4.4s)
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:112 | TEST prevalence  h=7 | n=6046 pos=881 (14.6%) | P=0.000 R=0.000 F1=0.000 | PR-AUC=0.146 (x1.0 over base) ROC-AUC=0.500 | thr=0.500 | CM=[[5165, 0], [881, 0]]
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:112 | TEST recent_rule h=7 | n=6046 pos=881 (14.6%) | P=0.170 R=0.808 F1=0.281 | PR-AUC=0.154 (x1.1 over base) ROC-AUC=0.548 | thr=0.824 | CM=[[1687, 3478], [169, 712]]
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:112 | TEST logistic    h=7 | n=6046 pos=881 (14.6%) | P=0.225 R=0.680 F1=0.338 | PR-AUC=0.252 (x1.7 over base) ROC-AUC=0.692 | thr=0.454 | CM=[[3104, 2061], [282, 599]]
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:112 | TEST grad_boost  h=7 | n=6046 pos=881 (14.6%) | P=0.235 R=0.711 F1=0.354 | PR-AUC=0.281 (x1.9 over base) ROC-AUC=0.714 | thr=0.459 | CM=[[3132, 2033], [255, 626]]
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:126 | Wrote /home/claude/NLP/results/social_baselines_20261117_185911
+2026-11-17 18:59:38 | INFO     | social_train_baselines | main:127 | === SOCIAL TRAIN BASELINES finished successfully ===

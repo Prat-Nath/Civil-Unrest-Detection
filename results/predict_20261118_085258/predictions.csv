@@ -1,0 +1,7 @@
+﻿text,violence_score,verdict,signal,violence_words,protest_actions,states_named,date
+Police used tear gas and a lathicharge on farmers at the border. Several injured. #FarmersProtest,0.9999,VIOLENT,VIOLENT UNREST SIGNAL,"injur, lathicharg, tear gas",police force,,2021-12-03
+Farmers will hold a tractor rally and a Bharat Bandh next week in Punjab,0.0905,not violent,"protest topic, no violence",,"bharat bandh, tractor rally",Punjab,2021-12-03
+This government is killing democracy. Shame on them!,0.7818,not violent,no unrest signal,,,,2021-12-03
+Mob attacked protesters and set vehicles on fire near Singhu border,0.9951,VIOLENT,VIOLENT UNREST SIGNAL,attacked,,Delhi,2021-12-04
+Beautiful sunrise at the protest site this morning. Langar served to everyone.,0.1469,not violent,no unrest signal,,,,2021-12-04
+Chakka jaam announced on Saturday. Roads to be blocked for three hours.,0.198,not violent,"protest topic, no violence",,chakka jaam,,2021-12-04

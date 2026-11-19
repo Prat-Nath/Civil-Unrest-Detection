@@ -1,0 +1,33 @@
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:66 | Python        : 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:67 | Platform      : Linux-6.8.0-149-generic-x86_64-with-glibc2.35
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:68 | Executable    : /usr/bin/python3
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:69 | Working dir   : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:70 | Project root  : /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:74 | Package       : numpy 2.2.6
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 02:41:00 | INFO     | farmers_label_weak | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:76 | Package       : torch not installed
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:74 | Package       : transformers 5.20.2
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : gold = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_labels/gold_claude.csv
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : log_dir = None
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : min_chars = 25
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : neg_ratio = 3.0
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : out_dir = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_labels
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : per_day = 150
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : seed = 42
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : test_start = 2021-10-01
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : tweets = /sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_processed/tweets_text.csv.gz
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | log_environment:79 | Arg           : val_start = 2021-07-01
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | main:49 | === FARMERS LABEL WEAK started (run 20261118_024100) ===
+2026-11-18 02:41:01 | INFO     | farmers_label_weak | timed_step:85 | START  load and flag tweets
+2026-11-18 02:41:42 | INFO     | farmers_label_weak | main:67 | tweets after filtering: 893877 | positives 56014 | negatives 712531 | ambiguous 125332
+2026-11-18 02:41:42 | INFO     | farmers_label_weak | timed_step:92 | DONE   load and flag tweets (40.5s)
+2026-11-18 02:41:42 | INFO     | farmers_label_weak | timed_step:85 | START  build splits
+2026-11-18 02:41:46 | INFO     | farmers_label_weak | main:85 | silver_train: {'rows': 49946, 'positives': 16860, 'positive_rate': 0.3376, 'day_min': '2020-11-01', 'day_max': '2021-06-30'}
+2026-11-18 02:41:47 | INFO     | farmers_label_weak | main:85 | silver_val: {'rows': 17888, 'positives': 4472, 'positive_rate': 0.25, 'day_min': '2021-07-01', 'day_max': '2021-09-30'}
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | main:85 | silver_test: {'rows': 12287, 'positives': 4487, 'positive_rate': 0.3652, 'day_min': '2021-10-01', 'day_max': '2021-11-21'}
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | timed_step:92 | DONE   build splits (6.3s)
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | timed_step:85 | START  score the rule on the gold sample
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | main:93 | rule on gold (weighted): {'precision': 0.9384, 'recall': 0.8424, 'f1': 0.8878, 'pr_auc': 0.8009, 'roc_auc': 0.9192, 'prevalence_est': 0.0658, 'threshold': 0.5, 'n_gold': 293} | 95% CI {'precision': [0.848, 0.97], 'recall': [0.549, 0.996], 'f1': [0.676, 0.978]}
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | timed_step:92 | DONE   score the rule on the gold sample (0.1s)
+2026-11-18 02:41:48 | INFO     | farmers_label_weak | main:95 | === FARMERS LABEL WEAK finished successfully ===

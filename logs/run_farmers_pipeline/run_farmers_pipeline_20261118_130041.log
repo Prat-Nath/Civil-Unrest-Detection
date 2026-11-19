@@ -1,0 +1,34 @@
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:66 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:67 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:68 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:69 | Working dir   : E:\ai\NLP
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:70 | Project root  : E:\ai\NLP
+2026-11-18 13:00:41 | INFO     | run_farmers_pipeline | log_environment:74 | Package       : numpy 2.3.5
+2026-11-18 13:00:42 | INFO     | run_farmers_pipeline | log_environment:74 | Package       : pandas 2.3.3
+2026-11-18 13:00:44 | INFO     | run_farmers_pipeline | log_environment:74 | Package       : sklearn 1.7.2
+2026-11-18 13:00:47 | INFO     | run_farmers_pipeline | log_environment:74 | Package       : torch 2.14.1+cu126
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:74 | Package       : transformers 5.23.0
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : acled_model_dir = None
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : base_model = distilroberta-base
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : batch_size = 32
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : cue_dropout = 0.5
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : epochs = 2
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : force = False
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : keep_going = False
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : max_eval = 0
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : max_train = 0
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : per_day = 300
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : skip_steps = transformer,transfer
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | log_environment:79 | Arg           : steps = prepare,label,tfidf,transformer,extract,transfer,forecast,summary
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | main:82 | === STEP prepare skipped (outputs exist; use --force to rebuild)
+2026-11-18 13:00:49 | INFO     | run_farmers_pipeline | run:69 | === STEP label: C:\ProgramData\anaconda3\python.exe E:\ai\NLP\scripts\farmers_label_weak.py
+2026-11-18 13:01:47 | INFO     | run_farmers_pipeline | run:73 | === STEP label OK in 58s
+2026-11-18 13:01:47 | INFO     | run_farmers_pipeline | run:69 | === STEP tfidf: C:\ProgramData\anaconda3\python.exe E:\ai\NLP\scripts\farmers_train_tweets.py --model tfidf --score-daily --per-day 300 --epochs 2 --batch-size 32 --cue-dropout 0.5 --base-model distilroberta-base
+2026-11-18 13:02:21 | INFO     | run_farmers_pipeline | run:73 | === STEP tfidf OK in 33s
+2026-11-18 13:02:21 | INFO     | run_farmers_pipeline | run:69 | === STEP extract: C:\ProgramData\anaconda3\python.exe E:\ai\NLP\scripts\farmers_extract.py
+2026-11-18 13:05:10 | INFO     | run_farmers_pipeline | run:73 | === STEP extract OK in 169s
+2026-11-18 13:05:10 | INFO     | run_farmers_pipeline | run:69 | === STEP forecast: C:\ProgramData\anaconda3\python.exe E:\ai\NLP\scripts\farmers_forecast.py --signals E:\ai\NLP\results\farmers_tweets_20261118_130151\daily_signals_tfidf.csv
+2026-11-18 13:05:38 | INFO     | run_farmers_pipeline | run:73 | === STEP forecast OK in 28s
+2026-11-18 13:05:38 | INFO     | run_farmers_pipeline | run:69 | === STEP summary: C:\ProgramData\anaconda3\python.exe E:\ai\NLP\scripts\farmers_summary.py
+2026-11-18 13:05:47 | INFO     | run_farmers_pipeline | run:73 | === STEP summary OK in 8s
+2026-11-18 13:05:47 | INFO     | run_farmers_pipeline | main:119 | pipeline finished: {'prepare': 'ok 0s', 'label': 'ok 58s', 'tfidf': 'ok 33s', 'extract': 'ok 169s', 'forecast': 'ok 28s', 'summary': 'ok 8s'}

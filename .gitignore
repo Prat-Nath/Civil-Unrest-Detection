@@ -1,0 +1,13 @@
+# --- files GitHub cannot accept (over its 100 MiB per-file limit); see LARGE_FILES.md ---
+data/social/*.json.gz
+data/tweets/archive.zip
+models/**/model.safetensors
+
+# --- scratch / generated ---
+_to_delete/
+node_modules/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

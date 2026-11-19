@@ -1,0 +1,274 @@
+{
+  "h1": {
+    "n_scored": 252,
+    "positives": 8,
+    "base_rate": 0.0317,
+    "models": {
+      "prevalence": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.0317,
+        "pr_auc_lift": 1.0,
+        "alert_days": 0,
+        "precision_at_alert": 0.0,
+        "recall_at_alert": 0.0,
+        "f1_at_alert": 0.0
+      },
+      "persistence": {
+        "roc_auc": 0.5154,
+        "pr_auc": 0.0472,
+        "pr_auc_lift": 1.49,
+        "alert_days": 51,
+        "precision_at_alert": 0.0392,
+        "recall_at_alert": 0.25,
+        "f1_at_alert": 0.0678
+      },
+      "acled": {
+        "roc_auc": 0.5912,
+        "pr_auc": 0.0474,
+        "pr_auc_lift": 1.49,
+        "alert_days": 81,
+        "precision_at_alert": 0.0494,
+        "recall_at_alert": 0.5,
+        "f1_at_alert": 0.0899
+      },
+      "tweets": {
+        "roc_auc": 0.5113,
+        "pr_auc": 0.04,
+        "pr_auc_lift": 1.26,
+        "alert_days": 57,
+        "precision_at_alert": 0.0351,
+        "recall_at_alert": 0.25,
+        "f1_at_alert": 0.0616
+      },
+      "acled_tweets": {
+        "roc_auc": 0.5543,
+        "pr_auc": 0.0565,
+        "pr_auc_lift": 1.78,
+        "alert_days": 57,
+        "precision_at_alert": 0.0526,
+        "recall_at_alert": 0.375,
+        "f1_at_alert": 0.0923
+      }
+    },
+    "roc_auc_ci95_block_bootstrap": {
+      "persistence": [
+        0.299,
+        0.722
+      ],
+      "acled": [
+        0.379,
+        0.757
+      ],
+      "tweets": [
+        0.291,
+        0.803
+      ],
+      "acled_tweets": [
+        0.342,
+        0.843
+      ],
+      "diff_acled_tweets_minus_acled": [
+        -0.26,
+        0.257
+      ]
+    }
+  },
+  "h3": {
+    "n_scored": 250,
+    "positives": 23,
+    "base_rate": 0.092,
+    "models": {
+      "prevalence": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.092,
+        "pr_auc_lift": 1.0,
+        "alert_days": 0,
+        "precision_at_alert": 0.0,
+        "recall_at_alert": 0.0,
+        "f1_at_alert": 0.0
+      },
+      "persistence": {
+        "roc_auc": 0.5047,
+        "pr_auc": 0.111,
+        "pr_auc_lift": 1.21,
+        "alert_days": 50,
+        "precision_at_alert": 0.1,
+        "recall_at_alert": 0.2174,
+        "f1_at_alert": 0.137
+      },
+      "acled": {
+        "roc_auc": 0.5413,
+        "pr_auc": 0.108,
+        "pr_auc_lift": 1.17,
+        "alert_days": 81,
+        "precision_at_alert": 0.1111,
+        "recall_at_alert": 0.3913,
+        "f1_at_alert": 0.1731
+      },
+      "tweets": {
+        "roc_auc": 0.4252,
+        "pr_auc": 0.1013,
+        "pr_auc_lift": 1.1,
+        "alert_days": 16,
+        "precision_at_alert": 0.125,
+        "recall_at_alert": 0.087,
+        "f1_at_alert": 0.1026
+      },
+      "acled_tweets": {
+        "roc_auc": 0.5091,
+        "pr_auc": 0.1138,
+        "pr_auc_lift": 1.24,
+        "alert_days": 28,
+        "precision_at_alert": 0.1071,
+        "recall_at_alert": 0.1304,
+        "f1_at_alert": 0.1176
+      }
+    },
+    "roc_auc_ci95_block_bootstrap": {
+      "persistence": [
+        0.328,
+        0.678
+      ],
+      "acled": [
+        0.361,
+        0.67
+      ],
+      "tweets": [
+        0.198,
+        0.712
+      ],
+      "acled_tweets": [
+        0.324,
+        0.725
+      ],
+      "diff_acled_tweets_minus_acled": [
+        -0.242,
+        0.214
+      ]
+    }
+  },
+  "h7": {
+    "n_scored": 246,
+    "positives": 50,
+    "base_rate": 0.2033,
+    "models": {
+      "prevalence": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.2033,
+        "pr_auc_lift": 1.0,
+        "alert_days": 0,
+        "precision_at_alert": 0.0,
+        "recall_at_alert": 0.0,
+        "f1_at_alert": 0.0
+      },
+      "persistence": {
+        "roc_auc": 0.4957,
+        "pr_auc": 0.2134,
+        "pr_auc_lift": 1.05,
+        "alert_days": 50,
+        "precision_at_alert": 0.16,
+        "recall_at_alert": 0.16,
+        "f1_at_alert": 0.16
+      },
+      "acled": {
+        "roc_auc": 0.5056,
+        "pr_auc": 0.2236,
+        "pr_auc_lift": 1.1,
+        "alert_days": 69,
+        "precision_at_alert": 0.1449,
+        "recall_at_alert": 0.2,
+        "f1_at_alert": 0.168
+      },
+      "tweets": {
+        "roc_auc": 0.4107,
+        "pr_auc": 0.2025,
+        "pr_auc_lift": 1.0,
+        "alert_days": 7,
+        "precision_at_alert": 0.4286,
+        "recall_at_alert": 0.06,
+        "f1_at_alert": 0.1053
+      },
+      "acled_tweets": {
+        "roc_auc": 0.5371,
+        "pr_auc": 0.2527,
+        "pr_auc_lift": 1.24,
+        "alert_days": 16,
+        "precision_at_alert": 0.25,
+        "recall_at_alert": 0.08,
+        "f1_at_alert": 0.1212
+      }
+    },
+    "roc_auc_ci95_block_bootstrap": {
+      "persistence": [
+        0.333,
+        0.653
+      ],
+      "acled": [
+        0.362,
+        0.645
+      ],
+      "tweets": [
+        0.225,
+        0.603
+      ],
+      "acled_tweets": [
+        0.369,
+        0.697
+      ],
+      "diff_acled_tweets_minus_acled": [
+        -0.212,
+        0.253
+      ]
+    }
+  },
+  "lead_time_h7": [
+    {
+      "model": "acled",
+      "surges_after_first_prediction": 9,
+      "surges_with_alert_in_prior_7d": 4,
+      "share_detected": 0.444,
+      "mean_earliest_lead_days": 5.5,
+      "alert_days": 69,
+      "alert_share_of_scored_days": 0.28
+    },
+    {
+      "model": "acled_tweets",
+      "surges_after_first_prediction": 9,
+      "surges_with_alert_in_prior_7d": 2,
+      "share_detected": 0.222,
+      "mean_earliest_lead_days": 5.5,
+      "alert_days": 16,
+      "alert_share_of_scored_days": 0.065
+    }
+  ],
+  "config": {
+    "data_dir": "/sessions/rcw-01sdgdctarhbicftt8vqc2yy/mnt/NLP/data/farmers_processed",
+    "z_threshold": 2.0,
+    "min_events": 15,
+    "baseline_days": 28,
+    "min_train_days": 90,
+    "refit_every": 7,
+    "alert_share": 0.2,
+    "C": 0.1,
+    "bootstrap": 500,
+    "seed": 42,
+    "log_dir": null
+  },
+  "surge_days": [
+    "2020-12-08",
+    "2020-12-14",
+    "2021-01-13",
+    "2021-01-26",
+    "2021-02-06",
+    "2021-02-18",
+    "2021-03-23",
+    "2021-03-26",
+    "2021-05-08",
+    "2021-05-26",
+    "2021-08-09",
+    "2021-08-28",
+    "2021-08-29",
+    "2021-09-27",
+    "2021-10-04"
+  ]
+}

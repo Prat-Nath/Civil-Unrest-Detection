@@ -1,0 +1,66 @@
+{
+  "run_name": "social_gru_20261117_190312_seed44",
+  "arch": "gru",
+  "window": 28,
+  "features": [
+    "log_tweets",
+    "log_related",
+    "share",
+    "high_share",
+    "mean_score",
+    "max_score",
+    "z_today",
+    "missing",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "horizons": [
+    1,
+    3,
+    7
+  ],
+  "feature_mean": [
+    5.578985214233398,
+    2.795304775238037,
+    0.06315073370933533,
+    0.06315076351165771,
+    0.20349858701229095,
+    0.8154698014259338,
+    0.052128881216049194,
+    0.026075029745697975,
+    -3.2030354388777604e-13,
+    1.3458613778993822e-08
+  ],
+  "feature_std": [
+    2.3099863529205322,
+    2.1020259857177734,
+    0.07443229854106903,
+    0.07443230599164963,
+    0.06444163620471954,
+    0.24196757376194,
+    1.0589152574539185,
+    0.15934725105762482,
+    0.7070391774177551,
+    0.7071760892868042
+  ],
+  "args": {
+    "panel": "/home/claude/NLP/data/social_processed/panel.csv.gz",
+    "models_dir": "/home/claude/NLP/models",
+    "results_dir": "/home/claude/NLP/results",
+    "log_dir": "None",
+    "arch": "gru",
+    "window": "28",
+    "d_model": "64",
+    "layers": "2",
+    "heads": "4",
+    "dropout": "0.2",
+    "epochs": "40",
+    "batch_size": "256",
+    "lr": "0.001",
+    "weight_decay": "0.01",
+    "patience": "6",
+    "horizons": "[1, 3, 7]",
+    "seed": "44",
+    "max_train_samples": "None"
+  }
+}

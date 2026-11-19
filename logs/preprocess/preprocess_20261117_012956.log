@@ -1,0 +1,56 @@
+2026-11-17 01:29:56 | INFO     | preprocess | main:122 | === PREPROCESS run_id=20261117_012956 ===
+2026-11-17 01:29:56 | INFO     | preprocess | main:123 | Log file: E:\ai\NLP\logs\preprocess\preprocess_20261117_012956.log
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:63 | Python        : 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:64 | Platform      : Windows-11-10.0.26200-SP0
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:65 | Executable    : C:\ProgramData\anaconda3\python.exe
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:66 | Working dir   : E:\ai\NLP
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:67 | Project root  : E:\ai\NLP
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:71 | Package       : numpy 2.3.5
+2026-11-17 01:29:56 | INFO     | preprocess | log_environment:71 | Package       : pandas 2.3.3
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:71 | Package       : sklearn 1.7.2
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:73 | Package       : torch not installed
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:73 | Package       : transformers not installed
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : input_dir = E:\ai\NLP\data
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : log_dir = None
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : min_chars = 20
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : output_dir = E:\ai\NLP\data\processed
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : seed = 42
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : test_frac = 0.15
+2026-11-17 01:29:57 | INFO     | preprocess | log_environment:76 | Arg           : val_frac = 0.15
+2026-11-17 01:29:57 | INFO     | preprocess | timed_step:82 | START  load raw CSVs
+2026-11-17 01:29:59 | INFO     | preprocess | load_raw:61 | Loaded ACLED Data_2026-11-01_event_date_from_2018-01-01_event_date_to_2025-11-01 (1).csv rows=168500 cols=31
+2026-11-17 01:29:59 | INFO     | preprocess | load_raw:67 | Combined raw data: 168500 rows
+2026-11-17 01:29:59 | INFO     | preprocess | timed_step:89 | DONE   load raw CSVs (1.4s)
+2026-11-17 01:29:59 | INFO     | preprocess | timed_step:82 | START  parse dates + filter crowd events (Protests/Riots)
+2026-11-17 01:29:59 | INFO     | preprocess | main:139 | Event types before filter: {'Protests': 128921, 'Riots': 20093, 'Strategic developments': 6478, 'Violence against civilians': 6082, 'Battles': 5514, 'Explosions/Remote violence': 1412}
+2026-11-17 01:29:59 | INFO     | preprocess | main:141 | Rows after crowd filter: 149014
+2026-11-17 01:29:59 | INFO     | preprocess | timed_step:89 | DONE   parse dates + filter crowd events (Protests/Riots) (0.2s)
+2026-11-17 01:29:59 | INFO     | preprocess | timed_step:82 | START  clean text
+2026-11-17 01:30:01 | INFO     | preprocess | main:147 | Rows with text shorter than 20 chars (dropped): 0
+2026-11-17 01:30:01 | INFO     | preprocess | main:149 | Rows after text cleaning: 149014
+2026-11-17 01:30:01 | INFO     | preprocess | main:150 | Text length (chars): {'count': 149014.0, 'mean': 268.7, 'std': 107.8, 'min': 63.0, '25%': 193.0, '50%': 247.0, '75%': 319.0, 'max': 2153.0}
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:89 | DONE   clean text (1.9s)
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:82 | START  drop duplicates
+2026-11-17 01:30:01 | INFO     | preprocess | main:158 | Dropped 0 duplicate event ids and 4 duplicate (text,date,location) rows; 149014 -> 149010 rows
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:89 | DONE   drop duplicates (0.3s)
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:82 | START  build labels + features
+2026-11-17 01:30:01 | INFO     | preprocess | main:167 | Label distribution: {'peaceful': 121814, 'tension': 7105, 'violent': 20091}
+2026-11-17 01:30:01 | INFO     | preprocess | main:169 | Violent rate overall: 13.48%  | fatality rate: 1.09%
+2026-11-17 01:30:01 | INFO     | preprocess | main:171 | crowd_size coverage: 89.3%
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:89 | DONE   build labels + features (0.2s)
+2026-11-17 01:30:01 | INFO     | preprocess | timed_step:82 | START  chronological train/val/test split
+2026-11-17 01:30:02 | INFO     | preprocess | time_split:99 | Split cut dates: train <= 2023-11-25 < val <= 2024-10-25 < test
+2026-11-17 01:30:02 | INFO     | preprocess | describe_split:113 | [train] rows=104340  dates=2018-01-01..2023-11-25  peaceful=84021 tension=5090 violent=15229  violent_rate=14.60%
+2026-11-17 01:30:02 | INFO     | preprocess | describe_split:113 | [val  ] rows=22383   dates=2023-11-26..2024-10-25  peaceful=18868 tension=1023 violent=2492  violent_rate=11.13%
+2026-11-17 01:30:02 | INFO     | preprocess | describe_split:113 | [test ] rows=22287   dates=2024-10-26..2025-11-01  peaceful=18925 tension=992 violent=2370  violent_rate=10.63%
+2026-11-17 01:30:02 | INFO     | preprocess | timed_step:89 | DONE   chronological train/val/test split (1.2s)
+2026-11-17 01:30:02 | INFO     | preprocess | timed_step:82 | START  class weights + write outputs
+2026-11-17 01:30:02 | INFO     | preprocess | main:200 | Class weights (3-class, from train): {'peaceful': 0.4139, 'tension': 6.833, 'violent': 2.2838}
+2026-11-17 01:30:02 | INFO     | preprocess | main:201 | Class weights (binary,  from train): {'non_violent': 0.5854, 'violent': 3.4257}
+2026-11-17 01:30:03 | INFO     | preprocess | main:207 | Wrote train  104340 rows -> E:\ai\NLP\data\processed\train.csv
+2026-11-17 01:30:03 | INFO     | preprocess | main:207 | Wrote val    22383 rows -> E:\ai\NLP\data\processed\val.csv
+2026-11-17 01:30:04 | INFO     | preprocess | main:207 | Wrote test   22287 rows -> E:\ai\NLP\data\processed\test.csv
+2026-11-17 01:30:04 | INFO     | preprocess | main:209 | Wrote label_info.json -> E:\ai\NLP\data\processed
+2026-11-17 01:30:04 | INFO     | preprocess | timed_step:89 | DONE   class weights + write outputs (1.2s)
+2026-11-17 01:30:04 | INFO     | preprocess | main:213 | Summary written -> E:\ai\NLP\logs\preprocess\preprocess_20261117_012956_summary.json
+2026-11-17 01:30:04 | INFO     | preprocess | main:214 | === PREPROCESS finished successfully ===
